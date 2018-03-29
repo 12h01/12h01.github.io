@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <title>João Pedro (@12h01)</title>
@@ -35,6 +36,7 @@ body, html {
       <a href="#stat" class="w3-bar-item w3-button">ESTATÍSTICAS</a>
       <a href="#pricing" class="w3-bar-item w3-button">PREÇOS</a>
       <a href="#contact" class="w3-bar-item w3-button">CONTATO</a>
+      <a href="#inxirido" onclick="document.getElementById('id01').style.display='block'" class="w3-bar-item w3-button">GERADOR DE POSTS</a>
     </div>
     <!-- Hide right-floated links on small screens and replace them with a menu icon -->
 
@@ -51,6 +53,8 @@ body, html {
   <a href="#stat" onclick="w3_close()" class="w3-bar-item w3-button">ESTATÍSTICAS</a>
   <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button">PREÇOS</a>
   <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTATO</a>
+  <a href="#inxirido" onclick="w3_close();document.getElementById('id01').style.display='block'" class="w3-bar-item w3-button">GERADOR DE POSTS</a>
+
 </nav>
 
 <!-- Header with full-height image -->
@@ -203,9 +207,193 @@ body, html {
   </div>
 </div>
 
+<!-- Gerador de Posts -->
+<div id="id01" class="w3-modal">
+  <div class="w3-modal-content w3-card-4">
+    <header class="w3-container w3-teal"> 
+      <span onclick="document.getElementById('id01').style.display='none'" 
+      class="w3-button w3-display-topright">&times;</span>
+      <h2>Gerador de Posts</h2>
+    </header>
+    <div class="w3-container">
+      <p>Gerar código HTML formatado no estilo de post usado no Império Downloads.</p>
+      <h6>Informações gerais</h6>
+      <div class="w3-row-padding">
+        <div class="w3-half">
+          <label>Título do Filme</label>
+          <textarea class="w3-input w3-border" id="tit"></textarea>
+        </div>
+        <div class="w3-half">
+          <label>Título Original</label>
+          <textarea class="w3-input w3-border" id="titen"></textarea>
+        </div>
+        <div class="w3-half">
+          <label>Gênero</label>
+          <textarea class="w3-input w3-border" id="g"></textarea>
+        </div>
+        <div class="w3-half">
+          <label>Ano</label>
+          <textarea class="w3-input w3-border" id="a"></textarea>
+        </div>
+        <div class="w3-half">
+          <label>Sinopse</label>
+          <textarea class="w3-input w3-border" id="s"></textarea>
+        </div>
+        <div class="w3-half">
+          <label>Subtítulo</label>
+          <textarea class="w3-input w3-border" id="sbt"></textarea>
+        </div>
+        <div class="w3-half">
+          <label>Duração</label>
+          <textarea class="w3-input w3-border" id="d"></textarea>
+        </div>
+        <div class="w3-half">
+          <label>Tamanho</label>
+          <textarea class="w3-input w3-border" id="t"></textarea>
+        </div>
+        <div class="w3-half">
+          <label>Qualidade</label>
+          <textarea class="w3-input w3-border" id="q"></textarea>
+        </div>
+        <div class="w3-half">
+          <label>Extensão</label>
+          <textarea class="w3-input w3-border" id="e"></textarea>
+        </div>
+      </div>
+      <h6>Links de Download</h6>
+      <div class="w3-row-padding">
+        <div class="w3-half">
+          <label>1Fichier 480p</label>
+          <textarea class="w3-input w3-border" id="fi4"></textarea>
+        </div>
+        <div class="w3-half">
+          <label>1Fichier 720p</label>
+          <textarea class="w3-input w3-border" id="fi7"></textarea>
+        </div>
+        <div class="w3-half">
+          <label>Openload 480p</label>
+          <textarea class="w3-input w3-border" id="op4"></textarea>
+        </div>
+        <div class="w3-half">
+          <label>Openload 720p</label>
+          <textarea class="w3-input w3-border" id="op7"></textarea>
+        </div>
+        <div class="w3-half">
+          <label>Sendit 480p</label>
+          <textarea class="w3-input w3-border" id="sd4"></textarea>
+        </div>
+        <div class="w3-half">
+          <label>Sendit 720p</label>
+          <textarea class="w3-input w3-border" id="sd7"></textarea>
+        </div>
+        <div class="w3-half">
+          <label>Streamango 480p</label>
+          <textarea class="w3-input w3-border" id="st4"></textarea>
+        </div>
+        <div class="w3-half">
+          <label>Streamango 720p</label>
+          <textarea class="w3-input w3-border" id="st7"></textarea>
+        </div>
+        <div class="w3-half">
+          <label>Upfile 480p</label>
+          <textarea class="w3-input w3-border" id="up4"></textarea>
+        </div>
+        <div class="w3-half">
+          <label>Upfile 720p</label>
+          <textarea class="w3-input w3-border" id="up7"></textarea>
+        </div>
+        <div class="w3-half">
+          <label>Filecloud 480p</label>
+          <textarea class="w3-input w3-border" id="fc4"></textarea>
+        </div>
+        <div class="w3-half">
+          <label>Filecloud 720p</label>
+          <textarea class="w3-input w3-border" id="fc7"></textarea>
+        </div>
+        <div class="w3-half">
+          <label>Addfile 480p</label>
+          <textarea class="w3-input w3-border" id="ad4"></textarea>
+        </div>
+        <div class="w3-half">
+          <label>Addfile 720p</label>
+          <textarea class="w3-input w3-border" id="ad7"></textarea>
+        </div>
+      </div>
+      <script>
+      function myFunction() {
+          var tit = document.getElementById("tit").value; 
+          var titen = document.getElementById("titen").value;
+          var ge = document.getElementById("g").value;
+          var an = document.getElementById("a").value;
+          var si = document.getElementById("s").value;
+          var sub = document.getElementById("sbt").value;
+          var du = document.getElementById("d").value;
+          var ta = document.getElementById("t").value;
+          var qu = document.getElementById("q").value;
+          var ex = document.getElementById("e").value;
+          var op4 = document.getElementById("op4").value;
+          var fi4 = document.getElementById("fi4").value;
+          var fc4 = document.getElementById("fc4").value;
+          var st4 = document.getElementById("st4").value;
+          var ad4 = document.getElementById("ad4").value;
+          var sd4 = document.getElementById("sd4").value;
+          var up4 = document.getElementById("up4").value;
+          var op7 = document.getElementById("op7").value;
+          var fi7 = document.getElementById("fi7").value;
+          var fc7 = document.getElementById("fc7").value;
+          var st7 = document.getElementById("st7").value;
+          var ad7 = document.getElementById("ad7").value;
+          var sd7 = document.getElementById("sd7").value;
+          var up7 = document.getElementById("up7").value; 
+         document.getElementById("fute").innerHTML = tit+' ('+an+') - Download em '+qu+' Dublado';
+         document.getElementById("ttlSeo").innerHTML = 'Baixar '+tit+' '+qu+' Dublado | Império Downloads';
+         document.getElementById("subtt").innerHTML = sub;
+         document.getElementById("sbtSeo").innerHTML = 'Em '+tit+', '+sub;
+         document.getElementById("gode").innerHTML = tit+', baixar '+tit+', Download '+tit+', Baixar '+tit+' '+qu+' Dublado';
+         document.getElementById("demo").innerHTML = '<p style="text-align: justify;">[bws_button name="SINOPSE" link="#" class="primary" size="expand" ]<br>'+si+'</p>[bws_button name="INFORMAÇÕES TÉCNICAS" link="#" class="primary" size="expand" ]<p style="text-align: center;"><br><b>Titulo Traduzido:</b> '+tit+'<br><b>Titulo Original:</b> '+titen+'<br><b>Ano de Lançamento:</b> '+an+'<br><b>Gênero:</b> '+ge+'<br><b>Idioma:</b> Português<br><b>Legenda:</b> S\L<br><b>Duração:</b> '+du+'<br><b>Tamanho:</b> '+ta+'<br><b>Resolução:</b> 854*480 / 1280*720<br><b>Qualidade:</b> '+qu+'<br><b>Extensão:</b> '+ex+'<br><b>Codec de Vídeo:</b> h264 / AVC<br><b>Codec de Áudio:</b> AC3 5.1<br><b>Áudio: 10</b><br><b>Vídeo: 10</b></p><p style="text-align: center;">[bws_button name="Download em 480p" link="#" class="primary" size="expand" ]<img class="alignnone wp-image-5150" src="https://www.imperiodownloads.xyz/wp-content/uploads/2017/11/25b6.png" alt="" width="12" height="12" /><a href="[rlprotetor id='+op4+']">Openload</a> | <a href="[rlprotetor id='+fc4+']">Filecloud</a> | <a href="[rlprotetor id='+fi4+']">1Fichier</a> | <img class="alignnone wp-image-5150" src="https://www.imperiodownloads.xyz/wp-content/uploads/2017/11/25b6.png" alt="" width="12" height="12" /><a href="[rlprotetor id='+st4+']">Streamango</a> | <a href="[rlprotetor id='+ad4+']">Addfile</a> | <img class="alignnone wp-image-5150" src="https://www.imperiodownloads.xyz/wp-content/uploads/2017/11/25b6.png" alt="" width="12" height="12" /><a href="[rlprotetor id='+sd4+']">Sendit</a> | <a href="[rlprotetor id='+up4+']">Upfile</a></p><p style="text-align: center;">[bws_button name="Download em 720p" link="#" class="primary" size="expand" ]<img class="alignnone wp-image-5150" src="https://www.imperiodownloads.xyz/wp-content/uploads/2017/11/25b6.png" alt="" width="12" height="12" /><a href="[rlprotetor id='+op7+']">Openload</a> | <a href="[rlprotetor id='+fc7+']">Filecloud</a> | <a href="[rlprotetor id='+fi7+']">1Fichier</a> | <img class="alignnone wp-image-5150" src="https://www.imperiodownloads.xyz/wp-content/uploads/2017/11/25b6.png" alt="" width="12" height="12" /><a href="[rlprotetor id='+st7+']">Streamango</a> | <a href="[rlprotetor id='+ad7+']">Addfile</a> | <img class="alignnone wp-image-5150" src="https://www.imperiodownloads.xyz/wp-content/uploads/2017/11/25b6.png" alt="" width="12" height="12" /><a href="[rlprotetor id='+sd7+']">Sendit</a> | <a href="[rlprotetor id='+up7+']">Upfile</a></p><p style="text-align: center;"><strong>Dica: </strong>Use os servidores marcados com o "<img class="alignnone wp-image-5150" src="https://www.imperiodownloads.xyz/wp-content/uploads/2017/11/25b6.png" alt="" width="12" height="12" />" para assistir online, sem precisar baixar o filme!</p><hr /><p style="text-align: justify;">Sugestões? Dúvidas? Problemas? Deixe abaixo nos comentários! ?</p>';
+      }
+      </script>
+      <p><center><button type="button" onclick="myFunction();" class="w3-button w3-border w3-hover-teal">Gerar códigos!</button></center></p>
+      <div class="w3-row-padding">
+        <div class="w3-third">
+          <label>Título gerado</label>
+          <textarea class="w3-input w3-border" id="fute"></textarea>
+        </div>
+        <div class="w3-third">
+          <label>Conteúdo do post</label>
+          <textarea class="w3-input w3-border" id="demo"></textarea>
+        </div>
+        <div class="w3-third">
+          <label>Tags</label>
+          <textarea class="w3-input w3-border" id="gode"></textarea>
+        </div>
+        <div class="w3-third">
+          <label>Subtítulo</label>
+          <textarea class="w3-input w3-border" id="subtt"></textarea>
+        </div>
+        <div class="w3-third">
+          <label>Título SEO</label>
+          <textarea class="w3-input w3-border" id="ttlSeo"></textarea>
+        </div>
+        <div class="w3-third">
+          <label>Sinopse SEO</label>
+          <textarea class="w3-input w3-border" id="sbtSeo"></textarea>
+        </div>
+      </div>
+      <p>Note que, se você não tiver preenchido todos os campos, precisará editar manualmente o código gerado.</p>
+    </div>
+    <footer class="w3-container w3-teal">
+      <p>© 2018 João Pedro. <i>All rights reserved.</i></p>
+    </footer>
+  </div>
+</div>
+
+
 <!-- Footer -->
 <footer class="w3-center w3-black w3-padding-64">
-  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>Voltar ao topo</a>
+  <p><a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>Voltar ao topo</a></p>
+  <p><button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-light-grey"><i class="fa fa-star w3-margin-right"></i>Gerador de Posts<br><i>Um exemplo de nosso trabalho.</i></button>
+  </p>
   <div class="w3-xlarge w3-section">
     <i class="fa fa-facebook-official w3-hover-opacity"></i>
     <i class="fa fa-whatsapp w3-hover-opacity"></i>
@@ -218,7 +406,6 @@ body, html {
 </footer>
 
 <script>
-
 // Modal Image Gallery
 function onClick(element) {
   document.getElementById("img01").src = element.src;
@@ -226,11 +413,8 @@ function onClick(element) {
   var captionText = document.getElementById("caption");
   captionText.innerHTML = element.alt;
 }
-
-
 // Toggle between showing and hiding the sidebar when clicking the menu icon
 var mySidebar = document.getElementById("mySidebar");
-
 function w3_open() {
     if (mySidebar.style.display === 'block') {
         mySidebar.style.display = 'none';
@@ -238,7 +422,6 @@ function w3_open() {
         mySidebar.style.display = 'block';
     }
 }
-
 // Close the sidebar with the close button
 function w3_close() {
     mySidebar.style.display = "none";
