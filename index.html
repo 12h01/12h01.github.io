@@ -1,126 +1,35 @@
-<!DOCTYPE html>
 <html>
 <head>
-    <title>Gerador de Posts - por João Pedro</title>
-    <style>
-        body{
-        text-align:center
-        }
-    </style>
+    <title>Gerador de Posts</title>
 </head>
 <body>
-<h1>Gerador de Posts</h1>
-<p><h5>Versão 2.1<br>Criado por João Pedro.<br>©2018. Todos os direitos reservados.<br><a href="https://twitter.com/12h01">Twitter</a> | <a href="http://facebook.com/carinhadov3">Facebook</a> | <a href="http://12h01.wodemo.net/">Site pessoal</a> | <a href="https://www.imperiodownloads.xyz">Império Downloads</a></h5></p>
-<p>Gerar post com duas resoluções (480p e 720p)</p>
+<center>
+<code>
+---██████╗-███████╗██████╗--█████╗-██████╗--██████╗-██████╗---<br>
+--██╔════╝-██╔════╝██╔══██╗██╔══██╗██╔══██╗██╔═══██╗██╔══██╗--<br>
+--██║--███╗█████╗--██████╔╝███████║██║--██║██║---██║██████╔╝--<br>
+--██║---██║██╔══╝--██╔══██╗██╔══██║██║--██║██║---██║██╔══██╗--<br>
+--╚██████╔╝███████╗██║--██║██║--██║██████╔╝╚██████╔╝██║--██║--<br>
+---╚═════╝-╚══════╝╚═╝--╚═╝╚═╝--╚═╝╚═════╝--╚═════╝-╚═╝--╚═╝--<br>
+--------------------------------------------------------------<br>
+██████╗-███████╗----██████╗--██████╗-███████╗████████╗███████╗<br>
+██╔══██╗██╔════╝----██╔══██╗██╔═══██╗██╔════╝╚══██╔══╝██╔════╝<br>
+██║--██║█████╗------██████╔╝██║---██║███████╗---██║---███████╗<br>
+██║--██║██╔══╝------██╔═══╝-██║---██║╚════██║---██║---╚════██║<br>
+██████╔╝███████╗----██║-----╚██████╔╝███████║---██║---███████║<br>
+╚═════╝-╚══════╝----╚═╝------╚═════╝-╚══════╝---╚═╝---╚══════╝<br>
+--------------------------------------------------------------
+</code>
 
-<h4>Informações sobre o filme</h4>
+<p>Versão 3.0<br>Criador: João Pedro<br><a href="https://twitter.com/12h01">Siga-me no Twitter!</a></p>
 
-Título do Filme<br>
-<textarea id="tit"></textarea><p>
+<p><code>--------------------------------------------------------------</code></p>
 
-Título Original<br>
-<textarea  id="titen"></textarea><p>
+<p><a href="1.html">Gerador de post Filme, 480p e 720p</a><br>
+<a href="2.html">Gerador de post Filme, 480p</a><br>
+<a href="3.html">Gerador de post Filme, 720p</a><br>
+<a href="4.html">Gerador de post ROM GBA</a></p>
 
-Gênero<br>
-<textarea id="g"></textarea><p>
-
-Ano<br>
-<textarea id="a"></textarea><p>
-
-Sinopse<br>
-<textarea  id="s"></textarea><p>
-
-Duração<br>
-<textarea id="d"  ></textarea><p>
-
-Tamanho<br>
-<textarea id="t"  ></textarea><p>
-
-Qualidade<br>
-<textarea id="q"  ></textarea><p>
-
-Extensão<br>
-<textarea id="e"  ></textarea><p>
-
-<h4>Links de Downloads</h4>
-
-1Fichier 480p<br>
-<textarea id="fi4"  ></textarea><p>
-
-1Fichier 720p<br>
-<textarea id="fi7"  ></textarea><p>
-
-Openload 480p<br>
-<textarea id="op4"  ></textarea><p>
-
-Openload 720p<br>
-<textarea id="op7"  ></textarea><p>
-
-Sendit 480p<br>
-<textarea id="sd4"  ></textarea><p>
-
-Sendit 720p<br>
-<textarea id="sd7"  ></textarea><p>
-
-Streamango 720p<br>
-<textarea id="st7"  ></textarea><p>
-
-Streamango 480p<br>
-<textarea id="st4"  ></textarea><p>
-
-
-Upfile 480p<br>
-<textarea id="up4"  ></textarea><p>
-
-Upfile 720p<br>
-<textarea id="up7"  ></textarea><p>
-
-
-Addfile 480p<br>
-<textarea id="ad4"  ></textarea><p>
-
-Addfile 720p<br>
-<textarea id="ad7"  ></textarea><p>
-
-
-Filecloud 480p<br>
-<textarea id="fc4"  ></textarea><p>
-
-Filecloud 720p<br>
-<textarea id="fc7"  ></textarea><p>
-
-<script>
-function myFunction() {
-    var tit = document.getElementById("tit").value; 
-    var titen = document.getElementById("titen").value;
-    var ge = document.getElementById("g").value;
-    var an = document.getElementById("a").value;
-    var si = document.getElementById("s").value;
-    var du = document.getElementById("d").value;
-    var ta = document.getElementById("t").value;
-    var qu = document.getElementById("q").value;
-    var ex = document.getElementById("e").value;
-    var op4 = document.getElementById("op4").value;
-    var fi4 = document.getElementById("fi4").value;
-    var fc4 = document.getElementById("fc4").value;
-    var st4 = document.getElementById("st4").value;
-    var ad4 = document.getElementById("ad4").value;
-    var sd4 = document.getElementById("sd4").value;
-    var up4 = document.getElementById("up4").value;
-    var op7 = document.getElementById("op7").value;
-    var fi7 = document.getElementById("fi7").value;
-    var fc7 = document.getElementById("fc7").value;
-    var st7 = document.getElementById("st7").value;
-    var ad7 = document.getElementById("ad7").value;
-    var sd7 = document.getElementById("sd7").value;
-    var up7 = document.getElementById("up7").value; 
-    document.getElementById("fute").innerHTML = tit+' ('+an+') - Download em '+qu+' Dublado';
-    document.getElementById("demo").innerHTML = '<p style="text-align: justify;">[bws_button name="SINOPSE" link="#" class="primary" size="expand" ]<br>'+si+'</p>[bws_button name="INFORMAÇÕES TÉCNICAS" link="#" class="primary" size="expand" ]<p style="text-align: center;"><br><b>Titulo Traduzido:</b> '+tit+'<br><b>Titulo Original:</b> '+titen+'<br><b>Ano de Lançamento:</b> '+an+'<br><b>Gênero:</b> '+ge+'<br><b>Idioma:</b> Português<br><b>Legenda:</b> S\L<br><b>Duração:</b> '+du+'<br><b>Tamanho:</b> '+ta+'<br><b>Resolução:</b> 854*480 / 1280*720<br><b>Qualidade:</b> '+qu+'<br><b>Extensão:</b> '+ex+'<br><b>Codec de Vídeo:</b> h264 / AVC<br><b>Codec de Áudio:</b> AC3 5.1<br><b>Áudio: 10</b><br><b>Vídeo: 10</b></p><p style="text-align: center;">[bws_button name="Download em 480p" link="#" class="primary" size="expand" ]<img class="alignnone wp-image-5150" src="https://www.imperiodownloads.xyz/wp-content/uploads/2017/11/25b6.png" alt="" width="12" height="12" /><a href="[rlprotetor id='+op4+'">Openload</a> | <a href="[rlprotetor id='+fc4+'">Filecloud</a> | <a href="[rlprotetor id='+fi4+'">1Fichier</a> | <img class="alignnone wp-image-5150" src="https://www.imperiodownloads.xyz/wp-content/uploads/2017/11/25b6.png" alt="" width="12" height="12" /><a href="[rlprotetor id='+st4+'">Streamango</a> | <a href="[rlprotetor id='+ad4+'">Addfile</a> | <img class="alignnone wp-image-5150" src="https://www.imperiodownloads.xyz/wp-content/uploads/2017/11/25b6.png" alt="" width="12" height="12" /><a href="[rlprotetor id='+sd4+'">Sendit</a> | <a href="[rlprotetor id='+up4+'">Upfile</a></p><p style="text-align: center;">[bws_button name="Download em 720p" link="#" class="primary" size="expand" ]<img class="alignnone wp-image-5150" src="https://www.imperiodownloads.xyz/wp-content/uploads/2017/11/25b6.png" alt="" width="12" height="12" /><a href="[rlprotetor id='+op7+'">Openload</a> | <a href="[rlprotetor id='+fc7+'">Filecloud</a> | <a href="[rlprotetor id='+fi7+'">1Fichier</a> | <img class="alignnone wp-image-5150" src="https://www.imperiodownloads.xyz/wp-content/uploads/2017/11/25b6.png" alt="" width="12" height="12" /><a href="[rlprotetor id='+st7+'">Streamango</a> | <a href="[rlprotetor id='+ad7+'">Addfile</a> | <img class="alignnone wp-image-5150" src="https://www.imperiodownloads.xyz/wp-content/uploads/2017/11/25b6.png" alt="" width="12" height="12" /><a href="[rlprotetor id='+sd7+'">Sendit</a> | <a href="[rlprotetor id='+up7+'">Upfile</a></p><p style="text-align: center;"><strong>Dica: </strong>Use os servidores marcados com o "<img class="alignnone wp-image-5150" src="https://www.imperiodownloads.xyz/wp-content/uploads/2017/11/25b6.png" alt="" width="12" height="12" />" para assistir online, sem precisar baixar o filme!</p><hr /><p style="text-align: justify;">Sugestões? Dúvidas? Problemas? Deixe abaixo nos comentários! ?</p>';
-}
-</script>
-<button type="button" onclick="myFunction();">Gerar texto</button>
-<p><textarea id="fute">O título gerado será exibido aqui.</textarea></p>
-<p><textarea id="demo">O conteúdo do post será exibido aqui.</textarea></p>
-<p>Note que, se você não tiver preenchido todos os campos, precisará editar manualmente o código gerado.</p>
+</center>
 </body>
 </html>
