@@ -1,149 +1,254 @@
+<!DOCTYPE html>
 <html>
-<head>
-    <title>Gerador de Posts</title>
-</head>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+body, html {
+    height: 100%;
+    line-height: 1.8;
+}
+/* Full height image header */
+.bgimg-1 {
+    background-position: center;
+    background-size: cover;
+    background-image: url("/w3images/mac.jpg");
+    min-height: 100%;
+}
+.w3-bar .w3-button {
+    padding: 16px;
+}
+</style>
 <body>
-<center>
-<code>
----██████╗-███████╗██████╗--█████╗-██████╗--██████╗-██████╗---<br>
---██╔════╝-██╔════╝██╔══██╗██╔══██╗██╔══██╗██╔═══██╗██╔══██╗--<br>
---██║--███╗█████╗--██████╔╝███████║██║--██║██║---██║██████╔╝--<br>
---██║---██║██╔══╝--██╔══██╗██╔══██║██║--██║██║---██║██╔══██╗--<br>
---╚██████╔╝███████╗██║--██║██║--██║██████╔╝╚██████╔╝██║--██║--<br>
----╚═════╝-╚══════╝╚═╝--╚═╝╚═╝--╚═╝╚═════╝--╚═════╝-╚═╝--╚═╝--<br>
---------------------------------------------------------------<br>
-██████╗-███████╗----██████╗--██████╗-███████╗████████╗███████╗<br>
-██╔══██╗██╔════╝----██╔══██╗██╔═══██╗██╔════╝╚══██╔══╝██╔════╝<br>
-██║--██║█████╗------██████╔╝██║---██║███████╗---██║---███████╗<br>
-██║--██║██╔══╝------██╔═══╝-██║---██║╚════██║---██║---╚════██║<br>
-██████╔╝███████╗----██║-----╚██████╔╝███████║---██║---███████║<br>
-╚═════╝-╚══════╝----╚═╝------╚═════╝-╚══════╝---╚═╝---╚══════╝<br>
---------------------------------------------------------------
-</code>
 
-<p>Versão 3.0<br>Criador: João Pedro<br><a href="https://twitter.com/12h01">Siga-me no Twitter!</a></p>
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-card" id="myNavbar">
+    <a href="#home" class="w3-bar-item w3-button w3-wide">12h01</a>
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small">
+      <a href="#about" class="w3-bar-item w3-button">SOBRE</a>
+      <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-th"></i> TRABALHOS</a>
+      <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTATO</a>
+    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
 
-<p><code>--------------------------------------------------------------</code></p>
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
 
-<p><a href="1.html">Gerador de post Filme, 480p e 720p</a><br>
-<a href="2.html">Gerador de post Filme, 480p</a><br>
-<a href="3.html">Gerador de post Filme, 720p</a><br>
-<a href="4.html">Gerador de post ROM GBA</a></p>
-    
-<h1>Gerador de Posts</h1>
-<p><h5>Criado por João Pedro.<br>©2018. Todos os direitos reservados.<br><a href="https://twitter.com/12h01">Twitter</a> | <a href="http://facebook.com/carinhadov3">Facebook</a> | <a href="http://12h01.wodemo.net/">Site pessoal</a> | <a href="https://www.imperiodownloads.xyz">Império Downloads</a></h5></p>
-<p>Gerar post com duas resoluções (480p e 720p)</p>
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Fechar ×</a>
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">SOBRE</a>
+  <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">TRABALHO</a>
+  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTATO</a>
+</nav>
 
-<h4>Informações sobre o filme</h4>
+<!-- Header with full-height image -->
+<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-left w3-text-white" style="padding:48px">
+    <span class="w3-jumbo w3-hide-small">Dedique seu tempo ao que realmente vale à pena!</span><br>
+    <span class="w3-xxlarge w3-hide-large w3-hide-medium">Dedique seu tempo ao que realmente vale à pena!</span><br>
+    <span class="w3-large">E deixe a parte trabalhosa conosco.</span>
+    <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Saiba mais e comece hoje mesmo!</a></p>
+  </div> 
+  <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
+    <i class="fa fa-phone w3-hover-opacity"></i>
+    <i class="fa fa-envelope w3-hover-opacity"></i>
+    <i class="fa fa-telegram w3-hover-opacity"></i>
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-whatsapp w3-hover-opacity"></i>
+  </div>
+</header>
 
-Título do Filme<br>
-<textarea id="tit"></textarea><p>
+<!-- About Section -->
+<div class="w3-container" style="padding:128px 16px" id="about">
+  <h3 class="w3-center">SOBRE NÓS</h3>
+  <p class="w3-center w3-large">Quais são nossos destaques?</p>
+  <div class="w3-row-padding w3-center" style="margin-top:64px">
+    <div class="w3-quarter">
+      <i class="fa fa-desktop w3-margin-bottom w3-jumbo w3-center"></i>
+      <p class="w3-large">Layout Responsivo</p>
+      <p>Trabalhamos com Bootstrap e outras coisas que vão deixar seu projeto responsivo e otimizado.</p>
+    </div>
+    <div class="w3-quarter">
+      <i class="fa fa-heart w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-large">Paixão</p>
+      <p>Seu projeto é uma parte importante do seu negócio - nós sabemos! O trataremos com todo respeito e dedicação que ele merece.</p>
+    </div>
+    <div class="w3-quarter">
+      <i class="fa fa-diamond w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-large">Design e Requinte</p>
+      <p>Um site bem feito é capaz de fidelizar seus clientes. Não se preocupe com isso; seu projeto ficará lindo!</p>
+    </div>
+    <div class="w3-quarter">
+      <i class="fa fa-cog w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-large">Suporte</p>
+      <p>Houve um problema? Nós consertamos o mais rápido possível! Estamos sempre disponível para seu projeto - não importa se é fim de semana, feriado ou qualquer outro dia!</p>
+    </div>
+  </div>
+</div>
 
-Título Original<br>
-<textarea  id="titen"></textarea><p>
+<!-- Promo Section - "We know design" -->
+<div class="w3-container w3-light-grey" style="padding:128px 16px">
+  <div class="w3-row-padding">
+    <div class="w3-col m6">
+      <h3>De design nós entendemos.</h3>
+      <p>Estamos sempre antenados com as indicações do mercado de design.<br>Garantimos: seu projeto nunca ficará defasado em relação ao mundo digital.</p>
+    </div>
+  </div>
+</div>
 
-Gênero<br>
-<textarea id="g"></textarea><p>
-
-Ano<br>
-<textarea id="a"></textarea><p>
-
-Sinopse<br>
-<textarea  id="s"></textarea><p>
-
-Duração<br>
-<textarea id="d"  ></textarea><p>
-
-Tamanho<br>
-<textarea id="t"  ></textarea><p>
-
-Qualidade<br>
-<textarea id="q"  ></textarea><p>
-
-Extensão<br>
-<textarea id="e"  ></textarea><p>
-
-<h4>Links de Downloads</h4>
-
-1Fichier 480p<br>
-<textarea id="fi4"  ></textarea><p>
-
-1Fichier 720p<br>
-<textarea id="fi7"  ></textarea><p>
-
-Openload 480p<br>
-<textarea id="op4"  ></textarea><p>
-
-Openload 720p<br>
-<textarea id="op7"  ></textarea><p>
-
-Sendit 480p<br>
-<textarea id="sd4"  ></textarea><p>
-
-Sendit 720p<br>
-<textarea id="sd7"  ></textarea><p>
-
-Streamango 720p<br>
-<textarea id="st7"  ></textarea><p>
-
-Streamango 480p<br>
-<textarea id="st4"  ></textarea><p>
-
-
-Upfile 480p<br>
-<textarea id="up4"  ></textarea><p>
-
-Upfile 720p<br>
-<textarea id="up7"  ></textarea><p>
+<!-- Promo Section "Statistics" -->
+<div class="w3-container w3-row w3-center w3-dark-grey w3-padding-64">
+  <div class="w3-quarter">
+    <span class="w3-xxlarge">14+</span>
+    <br>Parceiros
+  </div>
+  <div class="w3-quarter">
+    <span class="w3-xxlarge">55+</span>
+    <br>Projetos concluídos
+  </div>
+  <div class="w3-quarter">
+    <span class="w3-xxlarge">89+</span>
+    <br>Clientes felizes
+  </div>
+  <div class="w3-quarter">
+    <span class="w3-xxlarge">150+</span>
+    <br>Encontros
+  </div>
+</div>
 
 
-Addfile 480p<br>
-<textarea id="ad4"  ></textarea><p>
 
-Addfile 720p<br>
-<textarea id="ad7"  ></textarea><p>
+<!-- Modal for full size images on click-->
+<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+  <span class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topright" title="Close Modal Image">×</span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img01" class="w3-image">
+    <p id="caption" class="w3-opacity w3-large"></p>
+  </div>
+</div>
 
+<!-- Skills Section -->
+<div class="w3-container w3-light-grey w3-padding-64">
+  <div class="w3-row-padding">
+    <div class="w3-col m6">
+      <h3>Nossas habilidades.</h3>
+      <p>Veja nosso nível de conhecimento nas principais áreas que tangem o nosso trabalho.</p>
+    </div>
+    <div class="w3-col m6">
+      <p class="w3-wide"><i class="fa fa-code w3-margin-right"></i>Programação</p>
+      <div class="w3-grey">
+        <div class="w3-container w3-dark-grey w3-center" style="width:90%">90%</div>
+      </div>
+      <p class="w3-wide"><i class="fa fa-desktop w3-margin-right"></i>Web Design</p>
+      <div class="w3-grey">
+        <div class="w3-container w3-dark-grey w3-center" style="width:85%">85%</div>
+      </div>
+      <p class="w3-wide"><i class="fa fa-photo w3-margin-right"></i>Edição de Imagem</p>
+      <div class="w3-grey">
+        <div class="w3-container w3-dark-grey w3-center" style="width:75%">75%</div>
+      </div>
+    </div>
+  </div>
+</div>
 
-Filecloud 480p<br>
-<textarea id="fc4"  ></textarea><p>
+<!-- Pricing Section -->
+<div class="w3-container w3-center w3-dark-grey" style="padding:128px 16px" id="pricing">
+  <h3>PORTFÓLIO E PREÇOS</h3>
+  <p class="w3-large">Não trabalhamos com preços fixos - mas não se preocupe, todos eles cabem no seu bolso!</p>
+  <p class="w3-large">Nosso atendimento e o orçamento são feitos pessoalmente através de nossas plataformas de contato.</p>
+  <div class="w3-row-padding" style="margin-top:64px">
+    <div class="w3-third w3-section">
+      <ul class="w3-ul w3-white w3-hover-shadow">
+        <li class="w3-black w3-xlarge w3-padding-32">Criação de Sites</li>
+        <li class="w3-padding-16"><b>Layout</b> responsivo<br><i>Seu conteúdo é o mais importante; não a tela onde ele será visto. Com um layout responsivo ele se adapta facilmente a qualquer tela.</i></li>
+        <li class="w3-padding-16"><b>Domínio e hospedagem</b> por nossa conta<br><i>Você não precisa pagar nada a mais para manter o seu site ativo!</i></li>
+        <li class="w3-padding-16"><b>Email</b> personalizado<br><i>Afinal usar um email parecido com "minhaempresa2018@gmail.com" não é um bom negócio...</i></li>
+        <li class="w3-padding-16"><b>Suporte</b> garantido<br><i>A qualquer hora, em qualquer lugar, nós estaremos disponíveis para lhe atender.</i></li>
+        <li class="w3-padding-16">
+          <span class="w3-opacity">A partir de</span>
+          <h2 class="w3-wide">R$ 20</h2>
+          <span class="w3-opacity">por mês!</span>
+        </li>
+      </ul>
+    </div>
+    <div class="w3-third">
+      <ul class="w3-ul w3-white w3-hover-shadow">
+        <li class="w3-red w3-xlarge w3-padding-48">Aplicativos móveis para Android ou iOS</li>
+      </ul>
+    </div>
+    <div class="w3-third w3-section">
+      <ul class="w3-ul w3-white w3-hover-shadow">
+        <li class="w3-teal w3-xlarge w3-padding-32">Gerenciamento e design voltado para redes sociais</li>
+      </ul>
+    </div>
+  </div>
+</div>
 
-Filecloud 720p<br>
-<textarea id="fc7"  ></textarea><p>
+<!-- Contact Section -->
+<div class="w3-container w3-light-grey" style="padding:128px 16px" id="contact">
+  <h3 class="w3-center">CONTATO</h3>
+  <p class="w3-center w3-large">Deseja tirar dúvidas ou contratar nossos serviços? Entre em contato!</p>
+  <div class="w3-row-padding" style="margin-top:64px">
+    <div class="w3-half">
+      <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Juazeiro do Norte, Ceará</p>
+      <p><i class="fa fa-whatsapp fa-fw w3-xxlarge w3-margin-right"></i> WhatsApp: (88) 98818-0440</p>
+      <p><i class="fa fa-twitter fa-fw w3-xxlarge w3-margin-right"> </i> Twitter: @12h01</p>
+      <br>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>Voltar ao topo</a>
+  <div class="w3-xlarge w3-section">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-whatsapp w3-hover-opacity"></i>
+    <i class="fa fa-telegram w3-hover-opacity"></i>
+    <i class="fa fa-phone w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-envelope w3-hover-opacity"></i>
+  </div>
+  <p> © 2018 João Pedro. <i>All rights reserved.</i></p>
+</footer>
 
 <script>
-function myFunction() {
-    var tit = document.getElementById("tit").value; 
-    var titen = document.getElementById("titen").value;
-    var ge = document.getElementById("g").value;
-    var an = document.getElementById("a").value;
-    var si = document.getElementById("s").value;
-    var du = document.getElementById("d").value;
-    var ta = document.getElementById("t").value;
-    var qu = document.getElementById("q").value;
-    var ex = document.getElementById("e").value;
-    var op4 = document.getElementById("op4").value;
-    var fi4 = document.getElementById("fi4").value;
-    var fc4 = document.getElementById("fc4").value;
-    var st4 = document.getElementById("st4").value;
-    var ad4 = document.getElementById("ad4").value;
-    var sd4 = document.getElementById("sd4").value;
-    var up4 = document.getElementById("up4").value;
-    var op7 = document.getElementById("op7").value;
-    var fi7 = document.getElementById("fi7").value;
-    var fc7 = document.getElementById("fc7").value;
-    var st7 = document.getElementById("st7").value;
-    var ad7 = document.getElementById("ad7").value;
-    var sd7 = document.getElementById("sd7").value;
-    var up7 = document.getElementById("up7").value; 
-    document.getElementById("fute").innerHTML = tit+' ('+an+') - Download em '+qu+' Dublado';
-    document.getElementById("demo").innerHTML = '<p style="text-align: justify;">[bws_button name="SINOPSE" link="#" class="primary" size="expand" ]<br>'+si+'</p>[bws_button name="INFORMAÇÕES TÉCNICAS" link="#" class="primary" size="expand" ]<p style="text-align: center;"><br><b>Titulo Traduzido:</b> '+tit+'<br><b>Titulo Original:</b> '+titen+'<br><b>Ano de Lançamento:</b> '+an+'<br><b>Gênero:</b> '+ge+'<br><b>Idioma:</b> Português<br><b>Legenda:</b> S\L<br><b>Duração:</b> '+du+'<br><b>Tamanho:</b> '+ta+'<br><b>Resolução:</b> 854*480 / 1280*720<br><b>Qualidade:</b> '+qu+'<br><b>Extensão:</b> '+ex+'<br><b>Codec de Vídeo:</b> h264 / AVC<br><b>Codec de Áudio:</b> AC3 5.1<br><b>Áudio: 10</b><br><b>Vídeo: 10</b></p><p style="text-align: center;">[bws_button name="Download em 480p" link="#" class="primary" size="expand" ]<img class="alignnone wp-image-5150" src="https://www.imperiodownloads.xyz/wp-content/uploads/2017/11/25b6.png" alt="" width="12" height="12" /><a href="[rlprotetor id='+op4+']">Openload</a> | <a href="[rlprotetor id='+fc4+']">Filecloud</a> | <a href="[rlprotetor id='+fi4+']">1Fichier</a> | <img class="alignnone wp-image-5150" src="https://www.imperiodownloads.xyz/wp-content/uploads/2017/11/25b6.png" alt="" width="12" height="12" /><a href="[rlprotetor id='+st4+']">Streamango</a> | <a href="[rlprotetor id='+ad4+']">Addfile</a> | <img class="alignnone wp-image-5150" src="https://www.imperiodownloads.xyz/wp-content/uploads/2017/11/25b6.png" alt="" width="12" height="12" /><a href="[rlprotetor id='+sd4+']">Sendit</a> | <a href="[rlprotetor id='+up4+']">Upfile</a></p><p style="text-align: center;">[bws_button name="Download em 720p" link="#" class="primary" size="expand" ]<img class="alignnone wp-image-5150" src="https://www.imperiodownloads.xyz/wp-content/uploads/2017/11/25b6.png" alt="" width="12" height="12" /><a href="[rlprotetor id='+op7+']">Openload</a> | <a href="[rlprotetor id='+fc7+']">Filecloud</a> | <a href="[rlprotetor id='+fi7+']">1Fichier</a> | <img class="alignnone wp-image-5150" src="https://www.imperiodownloads.xyz/wp-content/uploads/2017/11/25b6.png" alt="" width="12" height="12" /><a href="[rlprotetor id='+st7+']">Streamango</a> | <a href="[rlprotetor id='+ad7+']">Addfile</a> | <img class="alignnone wp-image-5150" src="https://www.imperiodownloads.xyz/wp-content/uploads/2017/11/25b6.png" alt="" width="12" height="12" /><a href="[rlprotetor id='+sd7+']">Sendit</a> | <a href="[rlprotetor id='+up7+']">Upfile</a></p><p style="text-align: center;"><strong>Dica: </strong>Use os servidores marcados com o "<img class="alignnone wp-image-5150" src="https://www.imperiodownloads.xyz/wp-content/uploads/2017/11/25b6.png" alt="" width="12" height="12" />" para assistir online, sem precisar baixar o filme!</p><hr /><p style="text-align: justify;">Sugestões? Dúvidas? Problemas? Deixe abaixo nos comentários! ?</p>';
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+
+// Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+    if (mySidebar.style.display === 'block') {
+        mySidebar.style.display = 'none';
+    } else {
+        mySidebar.style.display = 'block';
+    }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
 }
 </script>
-<button type="button" onclick="myFunction();">Gerar texto</button>
-<p><textarea id="fute">O título gerado será exibido aqui.</textarea></p>
-<p><textarea id="demo">O conteúdo do post será exibido aqui.</textarea></p>
-<p>Note que, se você não tiver preenchido todos os campos, precisará editar manualmente o código gerado.</p>
-
-</center>
 </body>
 </html>
