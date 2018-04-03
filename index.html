@@ -37,6 +37,7 @@
       <a href="#pricing" class="w3-bar-item w3-button">PREÇOS</a>
       <a href="#contact" class="w3-bar-item w3-button">CONTATO</a>
       <a href="#inxirido" onclick="document.getElementById('id01').style.display='block'" class="w3-bar-item w3-button">GERADOR DE POSTS</a>
+      <a href="#eleVai" onclick="document.getElementById('id02').style.display='block'" class="w3-bar-item w3-button">GERADOR DE POSTS GBA</a>
     </div>
     <!-- Hide right-floated links on small screens and replace them with a menu icon -->
 
@@ -400,6 +401,164 @@
         <div class="w3-third">
             <label>Sinopse SEO</label>
             <textarea class="w3-input w3-border" id="sbtSeo"></textarea>
+        </div>
+    </div>
+    <p>Note que, se você não tiver preenchido todos os campos, precisará editar manualmente o código gerado.</p></div>
+
+        <footer class="w3-container w3-teal">
+        <p>Gerador de Posts. © 2018 João Pedro. <i>All rights reserved.</i></p>
+        </footer>
+    </div>
+</div>
+
+<!-- Gerador de Posts GBA -->
+<!-- Gerador de Posts -->
+<div id="id02" class="w3-modal">
+    <div class="w3-modal-content w3-card-4">
+        <header class="w3-container w3-teal"> 
+            <span onclick="document.getElementById('id01').style.display='none'" 
+            class="w3-button w3-display-topright">&times;</span>
+            <h2>Gerador de Posts GBA</h2>
+        </header>
+        <div class="w3-container">
+            <p>Gerar código HTML para Jogos, formatado no estilo de post usado no Império Downloads.</p>
+<p>
+<textarea placeholder="Informe o modo desejado." maxlength="1" rows="1" cols="1" class="w3-input" id="mod"></textarea><label>(1- GBA / 2- PSP)</label></p>
+    <h6>Informações gerais</h6>
+    <div class="w3-row-padding">
+        <div class="w3-half">
+            <label>Título da ROM</label>
+            <textarea class="w3-input w3-border" id="gtit"></textarea>
+        </div>
+        <div class="w3-half">
+            <label>Complemento do Título</label>
+            <textarea class="w3-input w3-border" id="gtiten"></textarea>
+        </div>
+        <div class="w3-half">
+            <label>Gênero do Jogo</label>
+            <textarea class="w3-input w3-border" id="gg"></textarea>
+        </div>
+        <div class="w3-half">
+            <label>Ano de Lançamento</label>
+            <textarea class="w3-input w3-border" id="ga"></textarea>
+        </div>
+        <div class="w3-half">
+            <label>Descrição</label>
+            <textarea class="w3-input w3-border" id="gs"></textarea>
+        </div>
+        <div class="w3-half">
+            <label>Subtítulo do Post</label>
+            <textarea class="w3-input w3-border" id="gsbt"></textarea>
+        </div>
+        <div class="w3-half">
+            <label>Origem (Oficial ou Hack ROM)</label>
+            <textarea class="w3-input w3-border" id="gd"></textarea>
+        </div>
+        <div class="w3-half">
+            <label>Idioma</label>
+            <textarea class="w3-input w3-border" id="gidio"></textarea>
+        </div>
+    </div>
+
+    <h6>Links de Download</h6>
+    <div class="w3-row-padding">
+        <div class="w3-half">
+            <label>1Fichier</label>
+            <textarea class="w3-input w3-border" id="gfi4"></textarea>
+        </div>
+        <div class="w3-half">
+            <label>Openload</label>
+            <textarea class="w3-input w3-border" id="gop4"></textarea>
+        </div>
+        <div class="w3-half">
+            <label>Sendit</label>
+            <textarea class="w3-input w3-border" id="gsd4"></textarea>
+        </div>
+        <div class="w3-half">
+            <label>Streamango</label>
+            <textarea class="w3-input w3-border" id="gst4"></textarea>
+        </div>
+        <div class="w3-half">
+            <label>Upfile</label>
+            <textarea class="w3-input w3-border" id="gup4"></textarea>
+        </div>
+        <div class="w3-half">
+            <label>Filecloud</label>
+            <textarea class="w3-input w3-border" id="gfc4"></textarea>
+        </div>
+        <div class="w3-half">
+            <label>Addfile</label>
+            <textarea class="w3-input w3-border" id="gup7"></textarea>
+        </div>
+        <div class="w3-half">
+            <label>Downace</label>
+            <textarea class="w3-input w3-border" id="gfc7"></textarea>
+        </div>
+    </div>
+    <script>
+        function myFunctiones() {
+        var atit = document.getElementById("gtit").value; 
+        var atiten = document.getElementById("gtiten").value;
+        var age = document.getElementById("gg").value;
+        var aan = document.getElementById("ga").value;
+        var aidio = document.getElementById("gidio").value;
+        var asi = document.getElementById("gs").value;
+        var asub = document.getElementById("gsbt").value;
+        var adu = document.getElementById("gd").value;
+        var aop4 = document.getElementById("gop4").value;
+        var afi4 = document.getElementById("gfi4").value;
+        var afc4 = document.getElementById("gfc4").value;
+        var ast4 = document.getElementById("gst4").value;
+        var asd4 = document.getElementById("gsd4").value;
+        var aup4 = document.getElementById("gup4").value;
+        var afc7 = document.getElementById("gfc7").value;
+        var aup7 = document.getElementById("gup7").value; 
+        var amodo = document.getElementById("mod").value;
+        if(amodo==1){
+        document.getElementById("gstatu").innerHTML = 'Modo GBA';
+        document.getElementById("gfute").innerHTML = atit+' ('+adu+'): '+atiten;
+        document.getElementById("gttlSeo").innerHTML = 'Baixar '+atit+' ('+adu+') | Império Downloads';
+        document.getElementById("gsubtt").innerHTML = asub;
+        document.getElementById("gsbtSeo").innerHTML = asub;
+        document.getElementById("ggode").innerHTML = atit+', baixar '+atit+', Download '+atit+', Baixar '+atit+' GBA, Download jogos GBA, baixar ROM HACK GBA, download JOGO '+atit+' GBA , download '+atit+' myboy, download GBA 2018, baixar jogos gameboy advanced ';
+        document.getElementById("gdemo").innerHTML = '<p style="text-align: justify;">[bws_button name="Descrição" link="#" class="primary" size="expand" ]<br>'+asi+'</p>[bws_button name="Informações Técnicas" link="#" class="primary" size="expand" ]<p style="text-align: center;"><br><b>Titulo da ROM:</b> '+atit+'<br><b>Ano de Lançamento:</b> '+aan+'<br><b>Gênero:</b> '+age+'<br><b>Idioma:</b> '+aidio+'<br><b>Oficial ou Hack:</b> '+adu+'<br></p><p style="text-align: center;">[bws_button name="Download da ROM" link="#" class="primary" size="expand" ]<a href="[rlprotetor id='+aop4+']">Openload</a> | <a href="[rlprotetor id='+afc4+']">Filecloud</a> | <a href="[rlprotetor id='+afi4+']">1Fichier</a> | <a href="[rlprotetor id='+ast4+']">Streamango</a> | <a href="[rlprotetor id='+aup7+']">Addfile</a> | <a href="[rlprotetor id='+afc7+']">Downace</a> | <a href="[rlprotetor id='+asd4+']">Sendit</a> | <a href="[rlprotetor id='+aup4+']">Upfile</a></p><hr /><p style="text-align: justify;">Sugestões? Dúvidas? Problemas? Deixe abaixo nos comentários! ?</p>';}
+        else if(amodo==2){
+        document.getElementById("gstatu").innerHTML = 'Modo PSP';
+        document.getElementById("gfute").innerHTML = atit+' ('+adu+'): '+atiten;
+        document.getElementById("gttlSeo").innerHTML = 'Baixar '+atit+' ('+adu+') | Império Downloads';
+        document.getElementById("gsubtt").innerHTML = asub;
+        document.getElementById("gsbtSeo").innerHTML = asub;
+        document.getElementById("ggode").innerHTML = atit+', baixar '+atit+', Download '+atit+', Baixar '+atit+' PSP, Download jogos PSP, baixar ROM HACK PSP, download JOGO '+atit+' PSP , download '+atit+' myboy, download PSP 2018, baixar jogos gameboy advanced ';
+        document.getElementById("gdemo").innerHTML = '<p style="text-align: justify;">[bws_button name="Descrição" link="#" class="primary" size="expand" ]<br>'+asi+'</p>[bws_button name="Informações Técnicas" link="#" class="primary" size="expand" ]<p style="text-align: center;"><br><b>Titulo da ROM:</b> '+atit+'<br><b>Ano de Lançamento:</b> '+aan+'<br><b>Gênero:</b> '+age+'<br><b>Idioma:</b> '+aidio+'<br><b>Oficial ou Hack:</b> '+adu+'<br></p><p style="text-align: center;">[bws_button name="Download da ROM" link="#" class="primary" size="expand" ]<a href="[rlprotetor id='+aop4+']">Openload</a> | <a href="[rlprotetor id='+afc4+']">Filecloud</a> | <a href="[rlprotetor id='+afi4+']">1Fichier</a> | <a href="[rlprotetor id='+ast4+']">Streamango</a> | <a href="[rlprotetor id='+aup7+']">Addfile</a> | <a href="[rlprotetor id='+afc7+']">Downace</a> | <a href="[rlprotetor id='+asd4+']">Sendit</a> | <a href="[rlprotetor id='+aup4+']">Upfile</a></p><hr /><p style="text-align: justify;">Sugestões? Dúvidas? Problemas? Deixe abaixo nos comentários! ?</p>';}else{alert('Você não selecionou um modo válido.');}
+        }
+    </script>
+    
+    <p><center><button type="button" onclick="myFunctiones();" class="w3-button w3-border w3-hover-teal">Gerar códigos!</button></center></p>
+    <p id="gstatu"></p>
+    <div class="w3-row-padding">
+        <div class="w3-third">
+            Título
+            <textarea class="w3-input w3-border" id="gfute"></textarea>
+        </div>
+        <div class="w3-third">
+            Post
+            <textarea class="w3-input w3-border" id="gdemo"></textarea>
+        </div>
+        <div class="w3-third">
+            Tags
+            <textarea class="w3-input w3-border" id="ggode"></textarea>
+        </div>
+        <div class="w3-third">
+            <label>Subtítulo</label>
+            <textarea class="w3-input w3-border" id="gsubtt"></textarea>
+        </div>
+        <div class="w3-third">
+            <label>Título SEO</label>
+            <textarea class="w3-input w3-border" id="gttlSeo"></textarea>
+        </div>
+        <div class="w3-third">
+            <label>Sinopse SEO</label>
+            <textarea class="w3-input w3-border" id="gsbtSeo"></textarea>
         </div>
     </div>
     <p>Note que, se você não tiver preenchido todos os campos, precisará editar manualmente o código gerado.</p></div>
