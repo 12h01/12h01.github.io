@@ -1,612 +1,545 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>João Pedro (@12h01)</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-    body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
-    body, html {
-        height: 100%;
-        line-height: 1.8;
-    }
-    /* Full height image header */
-    .bgimg-1 {
-        background-position: center;
-        background-size: cover;
-        background-image: url("https://www.w3schools.com/w3images/mac.jpg");
-        min-height: 100%;
-    }
-    .w3-bar .w3-button {
-        padding: 16px;
-    }
-    </style>
+<title>Site do João Pedro</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Indie+Flower">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin+Sans">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+h1,h2,h3,h4,h5,h6 {font-family: "Indie Flower", sans-serif}
+body{font-family: "Josefin Sans", sans-serif}
+body, html {
+height: 100%;
+line-height: 1.8;
+}
+
+.bgimg-1 {
+background-position: center;
+background-size: cover;
+min-height: 100%;
+background-color: teal;
+}
+
+.w3-bar .w3-button {
+padding: 16px;
+}
+
+</style>
+
 </head>
+
 <body>
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
-  <div class="w3-bar w3-white w3-card" id="myNavbar">
-    <a href="#home" class="w3-bar-item w3-button w3-wide">12h01</a>
-    <!-- Right-sided navbar links -->
-    <div class="w3-right w3-hide-small">
-      <a href="#about" class="w3-bar-item w3-button">SOBRE</a>
-      <a href="#stat" class="w3-bar-item w3-button">ESTATÍSTICAS</a>
-      <a href="#pricing" class="w3-bar-item w3-button">PREÇOS</a>
-      <a href="#contact" class="w3-bar-item w3-button">CONTATO</a>
-      <a href="#inxirido" onclick="document.getElementById('id01').style.display='block'" class="w3-bar-item w3-button">GERADOR DE POSTS</a>
-      <a href="#eleVai" onclick="document.getElementById('id02').style.display='block'" class="w3-bar-item w3-button">GERADOR DE POSTS GBA</a>
-    </div>
-    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
-
-    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()"><i class="fa fa-bars"></i>
-    </a>
-  </div>
+<div class="w3-bar w3-white w3-card" id="myNavbar">
+	<a href="#home" class="w3-bar-item w3-button w3-wide">JOAOPEDRO</a>
+	<!-- Right-sided navbar links -->
+	<div class="w3-right w3-hide-small">
+	<a href="#about" class="w3-bar-item w3-button">SOBRE MIM</a>
+	<a href="#stat" class="w3-bar-item w3-button">HISTÓRICO</a>
+	<a href="#pricing" class="w3-bar-item w3-button">PROJETOS</a>
+	<a href="#contact" class="w3-bar-item w3-button">CONTATO</a>
+	</div>
+	<!-- Hide right-floated links on small screens and replace them with a menu icon -->
+	<a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()"><i class="fa fa-bars"></i>
+	</a>
 </div>
-
+</div>
 <!-- Sidebar on small screens when clicking the menu icon -->
 <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
-  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Fechar ×</a>
-  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">SOBRE</a>
-  <a href="#stat" onclick="w3_close()" class="w3-bar-item w3-button">ESTATÍSTICAS</a>
-  <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button">PREÇOS</a>
-  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTATO</a>
-  <a href="#inxirido" onclick="w3_close();document.getElementById('id01').style.display='block'" class="w3-bar-item w3-button">GERADOR DE POSTS</a>
+<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Fechar ×</a>
+<a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">SOBRE</a>
+<a href="#stat" onclick="w3_close()" class="w3-bar-item w3-button">ESTATÍSTICAS</a>
+<a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button">PREÇOS</a>
+<a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTATO</a>
 </nav>
-
 <!-- Header with full-height image -->
 <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
-  <div class="w3-display-left w3-text-white" style="padding:48px">
-    <span class="w3-jumbo w3-hide-small">Dedique seu tempo ao que realmente vale à pena!</span><br>
-    <span class="w3-xxlarge w3-hide-large w3-hide-medium">Dedique seu tempo ao que realmente vale à pena!</span><br>
-    <span class="w3-large">E deixe a parte trabalhosa conosco.</span>
-    <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Saiba mais e comece hoje mesmo!</a></p>
-  </div> 
-  <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
-    <i class="fa fa-phone w3-hover-opacity"></i>
-    <i class="fa fa-envelope w3-hover-opacity"></i>
-    <i class="fa fa-telegram w3-hover-opacity"></i>
-    <i class="fa fa-facebook-official w3-hover-opacity"></i>
-    <i class="fa fa-twitter w3-hover-opacity"></i>
-    <i class="fa fa-whatsapp w3-hover-opacity"></i>
-  </div>
+<div class="w3-display-left w3-text-white" style="padding:48px">
+	<span class="w3-jumbo w3-hide-small">Não dê tanta atenção à aparências.</span><br>
+	<span class="w3-xxlarge w3-hide-large w3-hide-medium">Não dê tanta atenção à aparências.</span><br>
+	<span class="w3-large">O importante mesmo é a pessoa saber a diferença entre "Mas" e "Mais".</span>
+</div>
 </header>
-
 <!-- About Section -->
 <div class="w3-container" style="padding:128px 16px" id="about">
-  <h3 class="w3-center">SOBRE NÓS</h3>
-  <p class="w3-center w3-large">Quais são nossos destaques?</p>
-  <div class="w3-row-padding w3-center" style="margin-top:64px">
-    <div class="w3-quarter">
-      <i class="fa fa-desktop w3-margin-bottom w3-jumbo w3-center"></i>
-      <p class="w3-large">Layout Responsivo</p>
-      <p>Trabalhamos com Bootstrap e outras coisas que vão deixar seu projeto responsivo e otimizado.</p>
-    </div>
-    <div class="w3-quarter">
-      <i class="fa fa-heart w3-margin-bottom w3-jumbo"></i>
-      <p class="w3-large">Paixão</p>
-      <p>Seu projeto é uma parte importante do seu negócio - nós sabemos! O trataremos com todo respeito e dedicação que ele merece.</p>
-    </div>
-    <div class="w3-quarter">
-      <i class="fa fa-diamond w3-margin-bottom w3-jumbo"></i>
-      <p class="w3-large">Design e Requinte</p>
-      <p>Um site bem feito é capaz de fidelizar seus clientes. Não se preocupe com isso; seu projeto ficará lindo!</p>
-    </div>
-    <div class="w3-quarter">
-      <i class="fa fa-cog w3-margin-bottom w3-jumbo"></i>
-      <p class="w3-large">Suporte</p>
-      <p>Houve um problema? Nós consertamos o mais rápido possível! Estamos sempre disponível para seu projeto - não importa se é fim de semana, feriado ou qualquer outro dia!</p>
-    </div>
-  </div>
+<h3 class="w3-center">SOBRE MIM</h3>
+<p class="w3-center w3-large">Quem sou eu?</p>
+<p class="w3-center w3-large">João Pedro. 18 anos. Nascido no interior do Ceará, aluno esforçado, católico, twitteiro nas horas vagas (escassas ultimamente).</p>
+<div class="w3-row-padding w3-center" style="margin-top:64px">
+	<div class="w3-quarter">
+	<i class="fa fa-desktop w3-margin-bottom w3-jumbo w3-center"></i>
+	<p class="w3-large">Tecnologia</p>
+	<p>Entusiasta de tecnologia. Usuário de Android, Symbian S60v3, Windows 10 e Q4OS/Linux.</p>
+	</div>
+	<div class="w3-quarter">
+	<i class="fa fa-book w3-margin-bottom w3-jumbo"></i>
+	<p class="w3-large">Estudos</p>
+	<p>Cursando Licenciatura em Matemática. Gosto de ler livros didáticos de História e Sociologia. E de ler as tirinhas dos livros de Português.</p>
+	</div>
+	<div class="w3-quarter">
+	<i class="fa fa-money w3-margin-bottom w3-jumbo"></i>
+	<p class="w3-large">Vida financeira</p>
+	<p>Quem diz que dinheiro não traz felicidade precisa ver como eu fico quando acho uma nota de 5 reias perdida nos bolsos de minhas roupas...</p>
+	</div>
+	<div class="w3-quarter">
+	<i class="fa fa-cog w3-margin-bottom w3-jumbo"></i>
+	<p class="w3-large">Trabalhos</p>
+	<p>Experiência em JavaScript, HTML e Matemática. Conhecimentos leves em Design Gráfico e administração (de contas no Twitter e de grupos em aplicativos mensageiros.)</p>
+	</div>
 </div>
-
+</div>
 <!-- Promo Section - "We know design" -->
 <div class="w3-container w3-light-grey" style="padding:128px 16px" id="stat">
-  <div class="w3-row-padding">
-    <div class="w3-col m6">
-      <h3>De design nós entendemos.</h3>
-      <p>Estamos sempre antenados com as indicações do mercado de design.<br>Garantimos: seu projeto nunca ficará defasado em relação ao mundo digital.</p>
-    </div>
-  </div>
+<div class="w3-row-padding">
+	<h3>MEU HISTÓRICO</h3>
+	<p>Veja as minhas principais conquistas e trabalhos que eu já realizei.</p>
+    
+    <p>2013-2015: Blog "Tudo para X2-01"<br>
+    <i>Encerrado em 2015, após o fim da plataforma MyWapBlog (que hospedava o blog). 35000 visitas únicas alcançadas.</i></p>
+    
+    <p>2013, 2014 e 2015: Premiação no projeto "Aprender pra Valer"<br>
+    <i>Projeto que premia com um Notebook os alunos do Ensino Médio que alcançam notas boas no Spaece ou no Enem.</i></p>
+    
+    <p>2016: 15k de seguidores no Twitter<br>
+    <i>Alcancei 15k de seguidores na conta @FilosofoZueiro. Após isso abandonei o Twitter por vários meses, para dedicar-me à faculdade.</i></p>
+    
+    <p>Por enquanto só. Eu sou novinho ainda. :v </p>
 </div>
-
+</div>
 <!-- Promo Section "Statistics" -->
 <div class="w3-container w3-row w3-center w3-dark-grey w3-padding-64">
-  <div class="w3-quarter">
-    <span class="w3-xxlarge">14+</span>
-    <br>Parceiros
-  </div>
-  <div class="w3-quarter">
-    <span class="w3-xxlarge">55+</span>
-    <br>Projetos concluídos
-  </div>
-  <div class="w3-quarter">
-    <span class="w3-xxlarge">89+</span>
-    <br>Clientes felizes
-  </div>
-  <div class="w3-quarter">
-    <span class="w3-xxlarge">150+</span>
-    <br>Encontros
-  </div>
+<p class="w3-center w3-large">Meu estado no curso de Matemática.</p>
+<div class="w3-third">
+	<span class="w3-xxlarge">19</span>
+	<br>Disciplinas cursadas
 </div>
-
-
-
-<!-- Modal for full size images on click-->
-<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
-  <span class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topright" title="Close Modal Image">×</span>
-  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-    <img id="img01" class="w3-image">
-    <p id="caption" class="w3-opacity w3-large"></p>
-  </div>
+<div class="w3-third">
+	<span class="w3-xxlarge">980h</span>
+	<br>Carga horária
 </div>
-
-<!-- Skills Section -->
-<div class="w3-container w3-light-grey w3-padding-64">
-  <div class="w3-row-padding">
-    <div class="w3-col m6">
-      <h3>Nossas habilidades.</h3>
-      <p>Veja nosso nível de conhecimento nas principais áreas que tangem o nosso trabalho.</p>
-    </div>
-    <div class="w3-col m6">
-      <p class="w3-wide"><i class="fa fa-code w3-margin-right"></i>Programação</p>
-      <div class="w3-grey">
-        <div class="w3-container w3-dark-grey w3-center" style="width:90%">90%</div>
-      </div>
-      <p class="w3-wide"><i class="fa fa-desktop w3-margin-right"></i>Web Design</p>
-      <div class="w3-grey">
-        <div class="w3-container w3-dark-grey w3-center" style="width:85%">85%</div>
-      </div>
-      <p class="w3-wide"><i class="fa fa-photo w3-margin-right"></i>Edição de Imagem</p>
-      <div class="w3-grey">
-        <div class="w3-container w3-dark-grey w3-center" style="width:75%">75%</div>
-      </div>
-    </div>
-  </div>
+<div class="w3-third">
+	<span class="w3-xxlarge">8,04</span>
+	<br>Índice de Rendimento Acadêmico
 </div>
-
+<p class="w3-center"><br>Concluíndo o 4º semestre. 4 disciplinas de semestres anteriores a serem cursadas, por conta de incompatibilidade de horário nesse semestre.</p>
+</div>
 <!-- Pricing Section -->
-<div class="w3-container w3-center w3-dark-grey" style="padding:128px 16px" id="pricing">
-  <h3>PORTFÓLIO E PREÇOS</h3>
-  <p class="w3-large">Não trabalhamos com preços fixos - mas não se preocupe, todos eles cabem no seu bolso!</p>
-  <p class="w3-large">Nosso atendimento e o orçamento são feitos pessoalmente através de nossas plataformas de contato.</p>
-  <div class="w3-row-padding" style="margin-top:64px">
-    <div class="w3-center w3-section">
-      <ul class="w3-ul w3-white w3-hover-shadow">
-        <li class="w3-black w3-xlarge w3-padding-32">Criação de Sites</li>
-        <li class="w3-padding-16"><b>Layout</b> responsivo<br><i>Seu conteúdo é o mais importante; não a tela onde ele será visto. Com um layout responsivo ele se adapta facilmente a qualquer tela.</i></li>
-        <li class="w3-padding-16"><b>Domínio e hospedagem</b> por nossa conta<br><i>Você não precisa pagar nada a mais para manter o seu site ativo!</i></li>
-        <li class="w3-padding-16"><b>Email</b> personalizado<br><i>Afinal usar um email parecido com "minhaempresa2018@gmail.com" não é um bom negócio...</i></li>
-        <li class="w3-padding-16"><b>Suporte</b> garantido<br><i>A qualquer hora, em qualquer lugar, nós estaremos disponíveis para lhe atender.</i></li>
-        <li class="w3-red w3-xlarge w3-padding-48">Aplicativos móveis para Android ou iOS</li>
-        <li class="w3-teal w3-xlarge w3-padding-32">Gerenciamento e design voltado para redes sociais</li>
-        <li class="w3-padding-16">
-          <span class="w3-opacity">A partir de</span>
-          <h2 class="w3-wide">R$ 20</h2>
-          <span class="w3-opacity">por mês!</span>
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
+<div class="w3-container w3-center" style="padding:128px 16px" id="pricing">
+<h3>MEUS PROJETOS</h3>
+<p class="w3-large">Aqui você encontra atalhos para projetos realizados por mim.</p>
 
+<a class=" w3-button" href="https://12h01.wodemo.net" target="_blank">BLOG PESSOAL</a>
+
+<a href="#inxirido" onclick="document.getElementById('id01').style.display='block'" class=" w3-button">GERADOR DE POSTS</a>
+
+<a href="#eleVai" onclick="document.getElementById('id02').style.display='block'" class=" w3-button">GERADOR DE POSTS GBA</a>
+
+
+</div>
 <!-- Contact Section -->
-<div class="w3-container w3-light-grey" style="padding:128px 16px" id="contact">
-  <h3 class="w3-center">CONTATO</h3>
-  <p class="w3-center w3-large">Deseja tirar dúvidas ou contratar nossos serviços? Entre em contato!</p>
-  <div class="w3-row-padding" style="margin-top:64px">
-    <div class="w3-half">
-      <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Juazeiro do Norte, Ceará</p>
-      <p><i class="fa fa-whatsapp fa-fw w3-xxlarge w3-margin-right"></i> WhatsApp: (88) 98818-0440</p>
-      <p><i class="fa fa-twitter fa-fw w3-xxlarge w3-margin-right"> </i> Twitter: @12h01</p>
-      <br>
-    </div>
-  </div>
+<div class="w3-container w3-center w3-light-grey" style="padding:128px 16px" id="contact">
+<h3 >CONTATO</h3>
+<p class="w3-large">Precisa falar comigo? Aqui está meu contato!</p>
+	<p><i class="fa fa-whatsapp fa-fw "></i>/<i class="fa fa-phone fa-fw w3-margin-right"></i> (88) 98818-0440</p>
+	<p><i class="fa fa-envelope fa-fw w3-margin-right"> </i> carinhadov3@hotmail.com</p>
 </div>
-
-<!-- Gerador de Posts -->
-<div id="id01" class="w3-modal">
-    <div class="w3-modal-content w3-card-4">
-        <header class="w3-container w3-teal"> 
-            <span onclick="document.getElementById('id01').style.display='none'" 
-            class="w3-button w3-display-topright">&times;</span>
-            <h2>Gerador de Posts</h2>
-        </header>
-        <div class="w3-container">
-            <p>Gerar código HTML formatado no estilo de post usado no Império Downloads.</p>
-<p>
-<textarea placeholder="Informe o modo desejado." maxlength="1" rows="1" cols="1" class="w3-input" id="modo"></textarea><label>(1- 480p e 720p / 2- 480p / 3- 720p)</label></p>
-    <h6>Informações gerais</h6>
-    <div class="w3-row-padding">
-        <div class="w3-half">
-            <label>Título do Filme</label>
-            <textarea class="w3-input w3-border" id="tit"></textarea>
-        </div>
-        <div class="w3-half">
-            <label>Título Original</label>
-            <textarea class="w3-input w3-border" id="titen"></textarea>
-        </div>
-        <div class="w3-half">
-            <label>Gênero</label>
-            <textarea class="w3-input w3-border" id="g"></textarea>
-        </div>
-        <div class="w3-half">
-            <label>Ano</label>
-            <textarea class="w3-input w3-border" id="a"></textarea>
-        </div>
-        <div class="w3-half">
-            <label>Sinopse</label>
-            <textarea class="w3-input w3-border" id="s"></textarea>
-        </div>
-        <div class="w3-half">
-            <label>Subtítulo</label>
-            <textarea class="w3-input w3-border" id="sbt"></textarea>
-        </div>
-        <div class="w3-half">
-            <label>Duração</label>
-            <textarea class="w3-input w3-border" id="d"></textarea>
-        </div>
-        <div class="w3-half">
-            <label>Tamanho</label>
-            <textarea class="w3-input w3-border" id="t"></textarea>
-        </div>
-        <div class="w3-half">
-            <label>Qualidade</label>
-            <textarea class="w3-input w3-border" id="q"></textarea>
-        </div>
-        <div class="w3-half">
-            <label>Extensão</label>
-            <textarea class="w3-input w3-border" id="e"></textarea>
-        </div>
-    </div>
-    <h6>Links de Download</h6>
-    <div class="w3-row-padding">
-        <div class="w3-half">
-            <label>1Fichier 480p</label>
-            <textarea class="w3-input w3-border" id="fi4"></textarea>
-        </div>
-        <div class="w3-half">
-            <label>1Fichier 720p</label>
-            <textarea class="w3-input w3-border" id="fi7"></textarea>
-        </div>
-        <div class="w3-half">
-            <label>Openload 480p</label>
-            <textarea class="w3-input w3-border" id="op4"></textarea>
-        </div>
-        <div class="w3-half">
-            <label>Openload 720p</label>
-            <textarea class="w3-input w3-border" id="op7"></textarea>
-        </div>
-        <div class="w3-half">
-            <label>Sendit 480p</label>
-            <textarea class="w3-input w3-border" id="sd4"></textarea>
-        </div>
-        <div class="w3-half">
-            <label>Sendit 720p</label>
-            <textarea class="w3-input w3-border" id="sd7"></textarea>
-        </div>
-        <div class="w3-half">
-            <label>Streamango 480p</label>
-            <textarea class="w3-input w3-border" id="st4"></textarea>
-        </div>
-        <div class="w3-half">
-            <label>Streamango 720p</label>
-            <textarea class="w3-input w3-border" id="st7"></textarea>
-        </div>
-        <div class="w3-half">
-            <label>Upfile 480p</label>
-            <textarea class="w3-input w3-border" id="up4"></textarea>
-        </div>
-        <div class="w3-half">
-            <label>Upfile 720p</label>
-            <textarea class="w3-input w3-border" id="up7"></textarea>
-        </div>
-        <div class="w3-half">
-            <label>Filecloud 480p</label>
-            <textarea class="w3-input w3-border" id="fc4"></textarea>
-        </div>
-        <div class="w3-half">
-            <label>Filecloud 720p</label>
-            <textarea class="w3-input w3-border" id="fc7"></textarea>
-        </div>
-        <div class="w3-half">
-            <label>Addfile 480p</label>
-            <textarea class="w3-input w3-border" id="ad4"></textarea>
-        </div>
-        <div class="w3-half">
-            <label>Addfile 720p</label>
-            <textarea class="w3-input w3-border" id="ad7"></textarea>
-        </div>
-    </div>
-    <script>
-        function myFunction() {
-        var tit = document.getElementById("tit").value; 
-        var titen = document.getElementById("titen").value;
-        var ge = document.getElementById("g").value;
-        var an = document.getElementById("a").value;
-        var si = document.getElementById("s").value;
-        var sub = document.getElementById("sbt").value;
-        var du = document.getElementById("d").value;
-        var ta = document.getElementById("t").value;
-        var qu = document.getElementById("q").value;
-        var ex = document.getElementById("e").value;
-        var op4 = document.getElementById("op4").value;
-        var fi4 = document.getElementById("fi4").value;
-        var fc4 = document.getElementById("fc4").value;
-        var st4 = document.getElementById("st4").value;
-        var ad4 = document.getElementById("ad4").value;
-        var sd4 = document.getElementById("sd4").value;
-        var up4 = document.getElementById("up4").value;
-        var op7 = document.getElementById("op7").value;
-        var fi7 = document.getElementById("fi7").value;
-        var fc7 = document.getElementById("fc7").value;
-        var st7 = document.getElementById("st7").value;
-        var ad7 = document.getElementById("ad7").value;
-        var sd7 = document.getElementById("sd7").value;
-        var up7 = document.getElementById("up7").value; 
-        var modo = document.getElementById("modo").value;
-        if(modo==1){
-        document.getElementById("statu").innerHTML = 'Modo padrão. (480p e 720p)';
-        document.getElementById("fute").innerHTML = tit+' ('+an+') - Download em '+qu+' Dublado';
-        document.getElementById("ttlSeo").innerHTML = 'Baixar '+tit+' '+qu+' Dublado | Império Downloads';
-        document.getElementById("subtt").innerHTML = sub;
-        document.getElementById("sbtSeo").innerHTML = 'Em '+tit+', '+sub;
-        document.getElementById("gode").innerHTML = tit+', baixar '+tit+', Download '+tit+', Baixar '+tit+' '+qu+' Dublado, Download filmes gratis, baixar filmes dublado, download filme '+tit+' dublado '+an+ ' , download '+tit+' torrent, download filmes 2018, baixar filmes '+an;
-        document.getElementById("demo").innerHTML = '<p style="text-align: justify;">[bws_button name="SINOPSE" link="#" class="primary" size="expand" ]<br>'+si+'</p>[bws_button name="INFORMAÇÕES TÉCNICAS" link="#" class="primary" size="expand" ]<p style="text-align: center;"><br><b>Titulo Traduzido:</b> '+tit+'<br><b>Titulo Original:</b> '+titen+'<br><b>Ano de Lançamento:</b> '+an+'<br><b>Gênero:</b> '+ge+'<br><b>Idioma:</b> Português<br><b>Legenda:</b> S\L<br><b>Duração:</b> '+du+'<br><b>Tamanho:</b> '+ta+'<br><b>Resolução:</b> 854*480 / 1280*720<br><b>Qualidade:</b> '+qu+'<br><b>Extensão:</b> '+ex+'<br><b>Codec de Vídeo:</b> h264 / AVC<br><b>Codec de Áudio:</b> AC3 5.1<br><b>Áudio: 10</b><br><b>Vídeo: 10</b></p><p style="text-align: center;">[bws_button name="Download em 480p" link="#" class="primary" size="expand" ]<img class="alignnone wp-image-5150" src="https://www.imperiodownloads.xyz/wp-content/uploads/2017/11/25b6.png" alt="" width="12" height="12" /><a href="[rlprotetor id='+op4+']">Openload</a> | <a href="[rlprotetor id='+fc4+']">Filecloud</a> | <a href="[rlprotetor id='+fi4+']">1Fichier</a> | <img class="alignnone wp-image-5150" src="https://www.imperiodownloads.xyz/wp-content/uploads/2017/11/25b6.png" alt="" width="12" height="12" /><a href="[rlprotetor id='+st4+']">Streamango</a> | <a href="[rlprotetor id='+ad4+']">Addfile</a> | <img class="alignnone wp-image-5150" src="https://www.imperiodownloads.xyz/wp-content/uploads/2017/11/25b6.png" alt="" width="12" height="12" /><a href="[rlprotetor id='+sd4+']">Sendit</a> | <a href="[rlprotetor id='+up4+']">Upfile</a></p><p style="text-align: center;">[bws_button name="Download em 720p" link="#" class="primary" size="expand" ]<img class="alignnone wp-image-5150" src="https://www.imperiodownloads.xyz/wp-content/uploads/2017/11/25b6.png" alt="" width="12" height="12" /><a href="[rlprotetor id='+op7+']">Openload</a> | <a href="[rlprotetor id='+fc7+']">Filecloud</a> | <a href="[rlprotetor id='+fi7+']">1Fichier</a> | <img class="alignnone wp-image-5150" src="https://www.imperiodownloads.xyz/wp-content/uploads/2017/11/25b6.png" alt="" width="12" height="12" /><a href="[rlprotetor id='+st7+']">Streamango</a> | <a href="[rlprotetor id='+ad7+']">Addfile</a> | <img class="alignnone wp-image-5150" src="https://www.imperiodownloads.xyz/wp-content/uploads/2017/11/25b6.png" alt="" width="12" height="12" /><a href="[rlprotetor id='+sd7+']">Sendit</a> | <a href="[rlprotetor id='+up7+']">Upfile</a></p><p style="text-align: center;"><strong>Dica: </strong>Use os servidores marcados com o "<img class="alignnone wp-image-5150" src="https://www.imperiodownloads.xyz/wp-content/uploads/2017/11/25b6.png" alt="" width="12" height="12" />" para assistir online, sem precisar baixar o filme!</p><hr /><p style="text-align: justify;">Sugestões? Dúvidas? Problemas? Deixe abaixo nos comentários! ?</p>';}
-        else if(modo==2){
-        document.getElementById("statu").innerHTML = 'Modo 480p.';
-        document.getElementById("fute").innerHTML = tit+' ('+an+') - Download em 480p Dublado';
-        document.getElementById("ttlSeo").innerHTML = 'Baixar '+tit+' 480p Dublado | Império Downloads';
-        document.getElementById("subtt").innerHTML = sub;
-        document.getElementById("sbtSeo").innerHTML = 'Em '+tit+', '+sub;
-        document.getElementById("gode").innerHTML = tit+', baixar '+tit+', Download '+tit+', Baixar '+tit+' '+qu+' Dublado, Download filmes gratis, baixar filmes dublado, download filme '+tit+' dublado '+an+ ' , download '+tit+' torrent, download filmes 2018, baixar filmes '+an;
-        document.getElementById("demo").innerHTML = '<p style="text-align: justify;">[bws_button name="SINOPSE" link="#" class="primary" size="expand" ]<br>'+si+'</p>[bws_button name="INFORMAÇÕES TÉCNICAS" link="#" class="primary" size="expand" ]<p style="text-align: center;"><br><b>Titulo Traduzido:</b> '+tit+'<br><b>Titulo Original:</b> '+titen+'<br><b>Ano de Lançamento:</b> '+an+'<br><b>Gênero:</b> '+ge+'<br><b>Idioma:</b> Português<br><b>Legenda:</b> S\L<br><b>Duração:</b> '+du+'<br><b>Tamanho:</b> '+ta+'<br><b>Resolução:</b> 854*480<br><b>Qualidade:</b> '+qu+'<br><b>Extensão:</b> '+ex+'<br><b>Codec de Vídeo:</b> h264 / AVC<br><b>Codec de Áudio:</b> AC3 5.1<br><b>Áudio: 10</b><br><b>Vídeo: 10</b></p><p style="text-align: center;">[bws_button name="Download em 480p" link="#" class="primary" size="expand" ]<img class="alignnone wp-image-5150" src="https://www.imperiodownloads.xyz/wp-content/uploads/2017/11/25b6.png" alt="" width="12" height="12" /><a href="[rlprotetor id='+op4+']">Openload</a> | <a href="[rlprotetor id='+fc4+']">Filecloud</a> | <a href="[rlprotetor id='+fi4+']">1Fichier</a> | <img class="alignnone wp-image-5150" src="https://www.imperiodownloads.xyz/wp-content/uploads/2017/11/25b6.png" alt="" width="12" height="12" /><a href="[rlprotetor id='+st4+']">Streamango</a> | <a href="[rlprotetor id='+ad4+']">Addfile</a> | <img class="alignnone wp-image-5150" src="https://www.imperiodownloads.xyz/wp-content/uploads/2017/11/25b6.png" alt="" width="12" height="12" /><a href="[rlprotetor id='+sd4+']">Sendit</a> | <a href="[rlprotetor id='+up4+']">Upfile</a></p><p style="text-align: center;"><strong>Dica: </strong>Use os servidores marcados com o "<img class="alignnone wp-image-5150" src="https://www.imperiodownloads.xyz/wp-content/uploads/2017/11/25b6.png" alt="" width="12" height="12" />" para assistir online, sem precisar baixar o filme!</p><hr /><p style="text-align: justify;">Sugestões? Dúvidas? Problemas? Deixe abaixo nos comentários! ?</p>';
-        }else if(modo==3){
-        document.getElementById("statu").innerHTML = 'Modo 720p.';
-        document.getElementById("fute").innerHTML = tit+' ('+an+') - Download em '+qu+' Dublado';
-        document.getElementById("ttlSeo").innerHTML = 'Baixar '+tit+' '+qu+' Dublado | Império Downloads';
-        document.getElementById("subtt").innerHTML = sub;
-        document.getElementById("sbtSeo").innerHTML = 'Em '+tit+', '+sub;
-        document.getElementById("gode").innerHTML = tit+', baixar '+tit+', Download '+tit+', Baixar '+tit+' '+qu+' Dublado, Download filmes gratis, baixar filmes dublado, download filme '+tit+' dublado '+an+ ' , download '+tit+' torrent, download filmes 2018, baixar filmes '+an;
-        document.getElementById("demo").innerHTML = '<p style="text-align: justify;">[bws_button name="SINOPSE" link="#" class="primary" size="expand" ]<br>'+si+'</p>[bws_button name="INFORMAÇÕES TÉCNICAS" link="#" class="primary" size="expand" ]<p style="text-align: center;"><br><b>Titulo Traduzido:</b> '+tit+'<br><b>Titulo Original:</b> '+titen+'<br><b>Ano de Lançamento:</b> '+an+'<br><b>Gênero:</b> '+ge+'<br><b>Idioma:</b> Português<br><b>Legenda:</b> S\L<br><b>Duração:</b> '+du+'<br><b>Tamanho:</b> '+ta+'<br><b>Resolução:</b> 1280*720<br><b>Qualidade:</b> '+qu+'<br><b>Extensão:</b> '+ex+'<br><b>Codec de Vídeo:</b> h264 / AVC<br><b>Codec de Áudio:</b> AC3 5.1<br><b>Áudio: 10</b><br><b>Vídeo: 10</b></p><p style="text-align: center;">[bws_button name="Download em 720p" link="#" class="primary" size="expand" ]<img class="alignnone wp-image-5150" src="https://www.imperiodownloads.xyz/wp-content/uploads/2017/11/25b6.png" alt="" width="12" height="12" /><a href="[rlprotetor id='+op7+']">Openload</a> | <a href="[rlprotetor id='+fc7+']">Filecloud</a> | <a href="[rlprotetor id='+fi7+']">1Fichier</a> | <img class="alignnone wp-image-5150" src="https://www.imperiodownloads.xyz/wp-content/uploads/2017/11/25b6.png" alt="" width="12" height="12" /><a href="[rlprotetor id='+st7+']">Streamango</a> | <a href="[rlprotetor id='+ad7+']">Addfile</a> | <img class="alignnone wp-image-5150" src="https://www.imperiodownloads.xyz/wp-content/uploads/2017/11/25b6.png" alt="" width="12" height="12" /><a href="[rlprotetor id='+sd7+']">Sendit</a> | <a href="[rlprotetor id='+up7+']">Upfile</a></p><p style="text-align: center;"><strong>Dica: </strong>Use os servidores marcados com o "<img class="alignnone wp-image-5150" src="https://www.imperiodownloads.xyz/wp-content/uploads/2017/11/25b6.png" alt="" width="12" height="12" />" para assistir online, sem precisar baixar o filme!</p><hr /><p style="text-align: justify;">Sugestões? Dúvidas? Problemas? Deixe abaixo nos comentários! ?</p>';
-        }else{alert('Você não selecionou um modo válido.');}
-        }
-    </script>
-    
-    <p><center><button type="button" onclick="myFunction();" class="w3-button w3-border w3-hover-teal">Gerar códigos!</button></center></p>
-    <p id="statu"></p>
-    <div class="w3-row-padding">
-        <div class="w3-third">
-            Título
-            <textarea class="w3-input w3-border" id="fute"></textarea>
-        </div>
-        <div class="w3-third">
-            Post
-            <textarea class="w3-input w3-border" id="demo"></textarea>
-        </div>
-        <div class="w3-third">
-            Tags
-            <textarea class="w3-input w3-border" id="gode"></textarea>
-        </div>
-        <div class="w3-third">
-            <label>Subtítulo</label>
-            <textarea class="w3-input w3-border" id="subtt"></textarea>
-        </div>
-        <div class="w3-third">
-            <label>Título SEO</label>
-            <textarea class="w3-input w3-border" id="ttlSeo"></textarea>
-        </div>
-        <div class="w3-third">
-            <label>Sinopse SEO</label>
-            <textarea class="w3-input w3-border" id="sbtSeo"></textarea>
-        </div>
-    </div>
-    <p>Note que, se você não tiver preenchido todos os campos, precisará editar manualmente o código gerado.</p></div>
-
-        <footer class="w3-container w3-teal">
-        <p>Gerador de Posts. © 2018 João Pedro. <i>All rights reserved.</i></p>
-        </footer>
-    </div>
-</div>
-
-<!-- Gerador de Posts GBA -->
-<!-- Gerador de Posts -->
-<div id="id02" class="w3-modal">
-    <div class="w3-modal-content w3-card-4">
-        <header class="w3-container w3-teal"> 
-            <span onclick="document.getElementById('id02').style.display='none'" 
-            class="w3-button w3-display-topright">&times;</span>
-            <h2>Gerador de Posts GBA</h2>
-        </header>
-        <div class="w3-container">
-            <p>Gerar código HTML para Jogos, formatado no estilo de post usado no Império Downloads.</p>
-<p>
-<textarea placeholder="Informe o modo desejado." maxlength="1" rows="1" cols="1" class="w3-input" id="mod"></textarea><label>(1- GBA / 2- PSP)</label></p>
-    <h6>Informações gerais</h6>
-    <div class="w3-row-padding">
-        <div class="w3-half">
-            <label>Título da ROM</label>
-            <textarea class="w3-input w3-border" id="gtit"></textarea>
-        </div>
-        <div class="w3-half">
-            <label>Complemento do Título</label>
-            <textarea class="w3-input w3-border" id="gtiten"></textarea>
-        </div>
-        <div class="w3-half">
-            <label>Gênero do Jogo</label>
-            <textarea class="w3-input w3-border" id="gg"></textarea>
-        </div>
-        <div class="w3-half">
-            <label>Ano de Lançamento</label>
-            <textarea class="w3-input w3-border" id="ga"></textarea>
-        </div>
-        <div class="w3-half">
-            <label>Descrição</label>
-            <textarea class="w3-input w3-border" id="gs"></textarea>
-        </div>
-        <div class="w3-half">
-            <label>Subtítulo do Post</label>
-            <textarea class="w3-input w3-border" id="gsbt"></textarea>
-        </div>
-        <div class="w3-half">
-            <label>Origem (Oficial ou Hack ROM)</label>
-            <textarea class="w3-input w3-border" id="gd"></textarea>
-        </div>
-        <div class="w3-half">
-            <label>Idioma</label>
-            <textarea class="w3-input w3-border" id="gidio"></textarea>
-        </div>
-    </div>
-
-    <h6>Links de Download</h6>
-    <div class="w3-row-padding">
-        <div class="w3-half">
-            <label>1Fichier</label>
-            <textarea class="w3-input w3-border" id="gfi4"></textarea>
-        </div>
-        <div class="w3-half">
-            <label>Openload</label>
-            <textarea class="w3-input w3-border" id="gop4"></textarea>
-        </div>
-        <div class="w3-half">
-            <label>Sendit</label>
-            <textarea class="w3-input w3-border" id="gsd4"></textarea>
-        </div>
-        <div class="w3-half">
-            <label>Streamango</label>
-            <textarea class="w3-input w3-border" id="gst4"></textarea>
-        </div>
-        <div class="w3-half">
-            <label>Upfile</label>
-            <textarea class="w3-input w3-border" id="gup4"></textarea>
-        </div>
-        <div class="w3-half">
-            <label>Filecloud</label>
-            <textarea class="w3-input w3-border" id="gfc4"></textarea>
-        </div>
-        <div class="w3-half">
-            <label>Addfile</label>
-            <textarea class="w3-input w3-border" id="gup7"></textarea>
-        </div>
-        <div class="w3-half">
-            <label>Downace</label>
-            <textarea class="w3-input w3-border" id="gfc7"></textarea>
-        </div>
-    </div>
-    <script>
-        function myFunctiones() {
-        var atit = document.getElementById("gtit").value; 
-        var atiten = document.getElementById("gtiten").value;
-        var age = document.getElementById("gg").value;
-        var aan = document.getElementById("ga").value;
-        var aidio = document.getElementById("gidio").value;
-        var asi = document.getElementById("gs").value;
-        var asub = document.getElementById("gsbt").value;
-        var adu = document.getElementById("gd").value;
-        var aop4 = document.getElementById("gop4").value;
-        var afi4 = document.getElementById("gfi4").value;
-        var afc4 = document.getElementById("gfc4").value;
-        var ast4 = document.getElementById("gst4").value;
-        var asd4 = document.getElementById("gsd4").value;
-        var aup4 = document.getElementById("gup4").value;
-        var afc7 = document.getElementById("gfc7").value;
-        var aup7 = document.getElementById("gup7").value; 
-        var amodo = document.getElementById("mod").value;
-        if(amodo==1){
-        document.getElementById("gstatu").innerHTML = 'Modo GBA';
-        document.getElementById("gfute").innerHTML = atit+' ('+adu+'): '+atiten;
-        document.getElementById("gttlSeo").innerHTML = 'Baixar '+atit+' ('+adu+') | Império Downloads';
-        document.getElementById("gsubtt").innerHTML = asub;
-        document.getElementById("gsbtSeo").innerHTML = asub;
-        document.getElementById("ggode").innerHTML = atit+', baixar '+atit+', Download '+atit+', Baixar '+atit+' GBA, Download jogos GBA, baixar ROM HACK GBA, download JOGO '+atit+' GBA , download '+atit+' myboy, download GBA 2018, baixar jogos gameboy advanced ';
-        document.getElementById("gdemo").innerHTML = '<p style="text-align: justify;">[bws_button name="Descrição" link="#" class="primary" size="expand" ]<br>'+asi+'</p>[bws_button name="Informações Técnicas" link="#" class="primary" size="expand" ]<p style="text-align: center;"><br><b>Titulo da ROM:</b> '+atit+'<br><b>Ano de Lançamento:</b> '+aan+'<br><b>Gênero:</b> '+age+'<br><b>Idioma:</b> '+aidio+'<br><b>Oficial ou Hack:</b> '+adu+'<br></p><p style="text-align: center;">[bws_button name="Download da ROM" link="#" class="primary" size="expand" ]<a href="[rlprotetor id='+aop4+']">Openload</a> | <a href="[rlprotetor id='+afc4+']">Filecloud</a> | <a href="[rlprotetor id='+afi4+']">1Fichier</a> | <a href="[rlprotetor id='+ast4+']">Streamango</a> | <a href="[rlprotetor id='+aup7+']">Addfile</a> | <a href="[rlprotetor id='+afc7+']">Downace</a> | <a href="[rlprotetor id='+asd4+']">Sendit</a> | <a href="[rlprotetor id='+aup4+']">Upfile</a></p><hr /><p style="text-align: justify;">Sugestões? Dúvidas? Problemas? Deixe abaixo nos comentários! ?</p>';}
-        else if(amodo==2){
-        document.getElementById("gstatu").innerHTML = 'Modo PSP';
-        document.getElementById("gfute").innerHTML = atit+' ('+adu+'): '+atiten;
-        document.getElementById("gttlSeo").innerHTML = 'Baixar '+atit+' ('+adu+') | Império Downloads';
-        document.getElementById("gsubtt").innerHTML = asub;
-        document.getElementById("gsbtSeo").innerHTML = asub;
-        document.getElementById("ggode").innerHTML = atit+', baixar '+atit+', Download '+atit+', Baixar '+atit+' PSP, Download jogos PSP, baixar ROM HACK PSP, download JOGO '+atit+' PSP , download '+atit+' myboy, download PSP 2018, baixar jogos gameboy advanced ';
-        document.getElementById("gdemo").innerHTML = '<p style="text-align: justify;">[bws_button name="Descrição" link="#" class="primary" size="expand" ]<br>'+asi+'</p>[bws_button name="Informações Técnicas" link="#" class="primary" size="expand" ]<p style="text-align: center;"><br><b>Titulo da ROM:</b> '+atit+'<br><b>Ano de Lançamento:</b> '+aan+'<br><b>Gênero:</b> '+age+'<br><b>Idioma:</b> '+aidio+'<br><b>Oficial ou Hack:</b> '+adu+'<br></p><p style="text-align: center;">[bws_button name="Download da ROM" link="#" class="primary" size="expand" ]<a href="[rlprotetor id='+aop4+']">Openload</a> | <a href="[rlprotetor id='+afc4+']">Filecloud</a> | <a href="[rlprotetor id='+afi4+']">1Fichier</a> | <a href="[rlprotetor id='+ast4+']">Streamango</a> | <a href="[rlprotetor id='+aup7+']">Addfile</a> | <a href="[rlprotetor id='+afc7+']">Downace</a> | <a href="[rlprotetor id='+asd4+']">Sendit</a> | <a href="[rlprotetor id='+aup4+']">Upfile</a></p><hr /><p style="text-align: justify;">Sugestões? Dúvidas? Problemas? Deixe abaixo nos comentários! ?</p>';}else{alert('Você não selecionou um modo válido.');}
-        }
-    </script>
-    
-    <p><center><button type="button" onclick="myFunctiones();" class="w3-button w3-border w3-hover-teal">Gerar códigos!</button></center></p>
-    <p id="gstatu"></p>
-    <div class="w3-row-padding">
-        <div class="w3-third">
-            Título
-            <textarea class="w3-input w3-border" id="gfute"></textarea>
-        </div>
-        <div class="w3-third">
-            Post
-            <textarea class="w3-input w3-border" id="gdemo"></textarea>
-        </div>
-        <div class="w3-third">
-            Tags
-            <textarea class="w3-input w3-border" id="ggode"></textarea>
-        </div>
-        <div class="w3-third">
-            <label>Subtítulo</label>
-            <textarea class="w3-input w3-border" id="gsubtt"></textarea>
-        </div>
-        <div class="w3-third">
-            <label>Título SEO</label>
-            <textarea class="w3-input w3-border" id="gttlSeo"></textarea>
-        </div>
-        <div class="w3-third">
-            <label>Sinopse SEO</label>
-            <textarea class="w3-input w3-border" id="gsbtSeo"></textarea>
-        </div>
-    </div>
-    <p>Note que, se você não tiver preenchido todos os campos, precisará editar manualmente o código gerado.</p></div>
-
-        <footer class="w3-container w3-teal">
-        <p>Gerador de Posts. © 2018 João Pedro. <i>All rights reserved.</i></p>
-        </footer>
-    </div>
-</div>
-
-
 <!-- Footer -->
 <footer class="w3-center w3-black w3-padding-64">
-  <p><a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>Voltar ao topo</a></p>
-  <p><button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-light-grey"><i class="fa fa-star w3-margin-right"></i>Gerador de Posts<br><i>Um exemplo de nosso trabalho.</i></button>
-  </p>
-  <div class="w3-xlarge w3-section">
-    <i class="fa fa-facebook-official w3-hover-opacity"></i>
-    <i class="fa fa-whatsapp w3-hover-opacity"></i>
-    <i class="fa fa-telegram w3-hover-opacity"></i>
-    <i class="fa fa-phone w3-hover-opacity"></i>
-    <i class="fa fa-twitter w3-hover-opacity"></i>
-    <i class="fa fa-envelope w3-hover-opacity"></i>
-  </div>
-  <p> © 2018 João Pedro. <i>All rights reserved.</i></p>
+<p><a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>Voltar ao topo</a></p>
+<p>© 2018 João Pedro. <i>All rights reserved.</i></p>
+<p>Atualizado em 05/04/2018.</p>
+<p>Proudly powered by Github, W3CSS and Wodemo.</p>
 </footer>
-
 <script>
 // Modal Image Gallery
 function onClick(element) {
-  document.getElementById("img01").src = element.src;
-  document.getElementById("modal01").style.display = "block";
-  var captionText = document.getElementById("caption");
-  captionText.innerHTML = element.alt;
+	document.getElementById("img01").src = element.src;
+	document.getElementById("modal01").style.display = "block";
+	var captionText = document.getElementById("caption");
+	captionText.innerHTML = element.alt;
 }
 // Toggle between showing and hiding the sidebar when clicking the menu icon
 var mySidebar = document.getElementById("mySidebar");
 function w3_open() {
-    if (mySidebar.style.display === 'block') {
-        mySidebar.style.display = 'none';
-    } else {
-        mySidebar.style.display = 'block';
-    }
+	if (mySidebar.style.display === 'block') {
+	mySidebar.style.display = 'none';
+	} else {
+	mySidebar.style.display = 'block';
+	}
 }
 // Close the sidebar with the close button
 function w3_close() {
-    mySidebar.style.display = "none";
+	mySidebar.style.display = "none";
 }
 </script>
 </body>
 </html>
+
+<!-- Gerador de Posts -->
+<div id="id01" class="w3-modal">
+<div class="w3-modal-content w3-card-4">
+	<header class="w3-container w3-teal">
+	<span onclick="document.getElementById('id01').style.display='none'" 
+	class="w3-button w3-display-topright">&times;</span>
+	<h2>Gerador de Posts</h2>
+	</header>
+	<div class="w3-container">
+	<p>Gerar código HTML formatado no estilo de post usado no Império Downloads.</p>
+	<p>
+	<textarea placeholder="Informe o modo desejado." maxlength="1" rows="1" cols="1" class="w3-input" id="modo"></textarea><label>(1- 480p e 720p / 2- 480p / 3- 720p)</label>
+	</p>
+	<h6>Informações gerais</h6>
+	<div class="w3-row-padding">
+	<div class="w3-half">
+		<label>Título do Filme</label>
+		<textarea class="w3-input w3-border" id="tit"></textarea>
+	</div>
+	<div class="w3-half">
+		<label>Título Original</label>
+		<textarea class="w3-input w3-border" id="titen"></textarea>
+	</div>
+	<div class="w3-half">
+		<label>Gênero</label>
+		<textarea class="w3-input w3-border" id="g"></textarea>
+	</div>
+	<div class="w3-half">
+		<label>Ano</label>
+		<textarea class="w3-input w3-border" id="a"></textarea>
+	</div>
+	<div class="w3-half">
+		<label>Sinopse</label>
+		<textarea class="w3-input w3-border" id="s"></textarea>
+	</div>
+	<div class="w3-half">
+		<label>Subtítulo</label>
+		<textarea class="w3-input w3-border" id="sbt"></textarea>
+	</div>
+	<div class="w3-half">
+		<label>Duração</label>
+		<textarea class="w3-input w3-border" id="d"></textarea>
+	</div>
+	<div class="w3-half">
+		<label>Tamanho</label>
+		<textarea class="w3-input w3-border" id="t"></textarea>
+	</div>
+	<div class="w3-half">
+		<label>Qualidade</label>
+		<textarea class="w3-input w3-border" id="q"></textarea>
+	</div>
+	<div class="w3-half">
+		<label>Extensão</label>
+		<textarea class="w3-input w3-border" id="e"></textarea>
+	</div>
+	</div>
+	<h6>Links de Download</h6>
+	<div class="w3-row-padding">
+	<div class="w3-half">
+		<label>1Fichier 480p</label>
+		<textarea class="w3-input w3-border" id="fi4"></textarea>
+	</div>
+	<div class="w3-half">
+		<label>1Fichier 720p</label>
+		<textarea class="w3-input w3-border" id="fi7"></textarea>
+	</div>
+	<div class="w3-half">
+		<label>Openload 480p</label>
+		<textarea class="w3-input w3-border" id="op4"></textarea>
+	</div>
+	<div class="w3-half">
+		<label>Openload 720p</label>
+		<textarea class="w3-input w3-border" id="op7"></textarea>
+	</div>
+	<div class="w3-half">
+		<label>Sendit 480p</label>
+		<textarea class="w3-input w3-border" id="sd4"></textarea>
+	</div>
+	<div class="w3-half">
+		<label>Sendit 720p</label>
+		<textarea class="w3-input w3-border" id="sd7"></textarea>
+	</div>
+	<div class="w3-half">
+		<label>Streamango 480p</label>
+		<textarea class="w3-input w3-border" id="st4"></textarea>
+	</div>
+	<div class="w3-half">
+		<label>Streamango 720p</label>
+		<textarea class="w3-input w3-border" id="st7"></textarea>
+	</div>
+	<div class="w3-half">
+		<label>Upfile 480p</label>
+		<textarea class="w3-input w3-border" id="up4"></textarea>
+	</div>
+	<div class="w3-half">
+		<label>Upfile 720p</label>
+		<textarea class="w3-input w3-border" id="up7"></textarea>
+	</div>
+	<div class="w3-half">
+		<label>Filecloud 480p</label>
+		<textarea class="w3-input w3-border" id="fc4"></textarea>
+	</div>
+	<div class="w3-half">
+		<label>Filecloud 720p</label>
+		<textarea class="w3-input w3-border" id="fc7"></textarea>
+	</div>
+	<div class="w3-half">
+		<label>Addfile 480p</label>
+		<textarea class="w3-input w3-border" id="ad4"></textarea>
+	</div>
+	<div class="w3-half">
+		<label>Addfile 720p</label>
+		<textarea class="w3-input w3-border" id="ad7"></textarea>
+	</div>
+	</div>
+	<script>
+	function myFunction() {
+	var tit = document.getElementById("tit").value; 
+	var titen = document.getElementById("titen").value;
+	var ge = document.getElementById("g").value;
+	var an = document.getElementById("a").value;
+	var si = document.getElementById("s").value;
+	var sub = document.getElementById("sbt").value;
+	var du = document.getElementById("d").value;
+	var ta = document.getElementById("t").value;
+	var qu = document.getElementById("q").value;
+	var ex = document.getElementById("e").value;
+	var op4 = document.getElementById("op4").value;
+	var fi4 = document.getElementById("fi4").value;
+	var fc4 = document.getElementById("fc4").value;
+	var st4 = document.getElementById("st4").value;
+	var ad4 = document.getElementById("ad4").value;
+	var sd4 = document.getElementById("sd4").value;
+	var up4 = document.getElementById("up4").value;
+	var op7 = document.getElementById("op7").value;
+	var fi7 = document.getElementById("fi7").value;
+	var fc7 = document.getElementById("fc7").value;
+	var st7 = document.getElementById("st7").value;
+	var ad7 = document.getElementById("ad7").value;
+	var sd7 = document.getElementById("sd7").value;
+	var up7 = document.getElementById("up7").value; 
+	var modo = document.getElementById("modo").value;
+	if(modo==1){
+	document.getElementById("statu").innerHTML = 'Modo padrão. (480p e 720p)';
+	document.getElementById("fute").innerHTML = tit+' ('+an+') - Download em '+qu+' Dublado';
+	document.getElementById("ttlSeo").innerHTML = 'Baixar '+tit+' '+qu+' Dublado | Império Downloads';
+	document.getElementById("subtt").innerHTML = sub;
+	document.getElementById("sbtSeo").innerHTML = 'Em '+tit+', '+sub;
+	document.getElementById("gode").innerHTML = tit+', baixar '+tit+', Download '+tit+', Baixar '+tit+' '+qu+' Dublado, Download filmes gratis, baixar filmes dublado, download filme '+tit+' dublado '+an+ ' , download '+tit+' torrent, download filmes 2018, baixar filmes '+an;
+	document.getElementById("demo").innerHTML = '<p style="text-align: justify;">[bws_button name="SINOPSE" link="#" class="primary" size="expand" ]<br>'+si+'</p>[bws_button name="INFORMAÇÕES TÉCNICAS" link="#" class="primary" size="expand" ]<p style="text-align: center;"><br><b>Titulo Traduzido:</b> '+tit+'<br><b>Titulo Original:</b> '+titen+'<br><b>Ano de Lançamento:</b> '+an+'<br><b>Gênero:</b> '+ge+'<br><b>Idioma:</b> Português<br><b>Legenda:</b> S\L<br><b>Duração:</b> '+du+'<br><b>Tamanho:</b> '+ta+'<br><b>Resolução:</b> 854*480 / 1280*720<br><b>Qualidade:</b> '+qu+'<br><b>Extensão:</b> '+ex+'<br><b>Codec de Vídeo:</b> h264 / AVC<br><b>Codec de Áudio:</b> AC3 5.1<br><b>Áudio: 10</b><br><b>Vídeo: 10</b></p><p style="text-align: center;">[bws_button name="Download em 480p" link="#" class="primary" size="expand" ]<img class="alignnone wp-image-5150" src="https://www.imperiodownloads.xyz/wp-content/uploads/2017/11/25b6.png" alt="" width="12" height="12" /><a href="[rlprotetor id='+op4+']">Openload</a> | <a href="[rlprotetor id='+fc4+']">Filecloud</a> | <a href="[rlprotetor id='+fi4+']">1Fichier</a> | <img class="alignnone wp-image-5150" src="https://www.imperiodownloads.xyz/wp-content/uploads/2017/11/25b6.png" alt="" width="12" height="12" /><a href="[rlprotetor id='+st4+']">Streamango</a> | <a href="[rlprotetor id='+ad4+']">Addfile</a> | <img class="alignnone wp-image-5150" src="https://www.imperiodownloads.xyz/wp-content/uploads/2017/11/25b6.png" alt="" width="12" height="12" /><a href="[rlprotetor id='+sd4+']">Sendit</a> | <a href="[rlprotetor id='+up4+']">Upfile</a></p><p style="text-align: center;">[bws_button name="Download em 720p" link="#" class="primary" size="expand" ]<img class="alignnone wp-image-5150" src="https://www.imperiodownloads.xyz/wp-content/uploads/2017/11/25b6.png" alt="" width="12" height="12" /><a href="[rlprotetor id='+op7+']">Openload</a> | <a href="[rlprotetor id='+fc7+']">Filecloud</a> | <a href="[rlprotetor id='+fi7+']">1Fichier</a> | <img class="alignnone wp-image-5150" src="https://www.imperiodownloads.xyz/wp-content/uploads/2017/11/25b6.png" alt="" width="12" height="12" /><a href="[rlprotetor id='+st7+']">Streamango</a> | <a href="[rlprotetor id='+ad7+']">Addfile</a> | <img class="alignnone wp-image-5150" src="https://www.imperiodownloads.xyz/wp-content/uploads/2017/11/25b6.png" alt="" width="12" height="12" /><a href="[rlprotetor id='+sd7+']">Sendit</a> | <a href="[rlprotetor id='+up7+']">Upfile</a></p><p style="text-align: center;"><strong>Dica: </strong>Use os servidores marcados com o "<img class="alignnone wp-image-5150" src="https://www.imperiodownloads.xyz/wp-content/uploads/2017/11/25b6.png" alt="" width="12" height="12" />" para assistir online, sem precisar baixar o filme!</p><hr /><p style="text-align: justify;">Sugestões? Dúvidas? Problemas? Deixe abaixo nos comentários! ?</p>';}
+	else if(modo==2){
+	document.getElementById("statu").innerHTML = 'Modo 480p.';
+	document.getElementById("fute").innerHTML = tit+' ('+an+') - Download em 480p Dublado';
+	document.getElementById("ttlSeo").innerHTML = 'Baixar '+tit+' 480p Dublado | Império Downloads';
+	document.getElementById("subtt").innerHTML = sub;
+	document.getElementById("sbtSeo").innerHTML = 'Em '+tit+', '+sub;
+	document.getElementById("gode").innerHTML = tit+', baixar '+tit+', Download '+tit+', Baixar '+tit+' '+qu+' Dublado, Download filmes gratis, baixar filmes dublado, download filme '+tit+' dublado '+an+ ' , download '+tit+' torrent, download filmes 2018, baixar filmes '+an;
+	document.getElementById("demo").innerHTML = '<p style="text-align: justify;">[bws_button name="SINOPSE" link="#" class="primary" size="expand" ]<br>'+si+'</p>[bws_button name="INFORMAÇÕES TÉCNICAS" link="#" class="primary" size="expand" ]<p style="text-align: center;"><br><b>Titulo Traduzido:</b> '+tit+'<br><b>Titulo Original:</b> '+titen+'<br><b>Ano de Lançamento:</b> '+an+'<br><b>Gênero:</b> '+ge+'<br><b>Idioma:</b> Português<br><b>Legenda:</b> S\L<br><b>Duração:</b> '+du+'<br><b>Tamanho:</b> '+ta+'<br><b>Resolução:</b> 854*480<br><b>Qualidade:</b> '+qu+'<br><b>Extensão:</b> '+ex+'<br><b>Codec de Vídeo:</b> h264 / AVC<br><b>Codec de Áudio:</b> AC3 5.1<br><b>Áudio: 10</b><br><b>Vídeo: 10</b></p><p style="text-align: center;">[bws_button name="Download em 480p" link="#" class="primary" size="expand" ]<img class="alignnone wp-image-5150" src="https://www.imperiodownloads.xyz/wp-content/uploads/2017/11/25b6.png" alt="" width="12" height="12" /><a href="[rlprotetor id='+op4+']">Openload</a> | <a href="[rlprotetor id='+fc4+']">Filecloud</a> | <a href="[rlprotetor id='+fi4+']">1Fichier</a> | <img class="alignnone wp-image-5150" src="https://www.imperiodownloads.xyz/wp-content/uploads/2017/11/25b6.png" alt="" width="12" height="12" /><a href="[rlprotetor id='+st4+']">Streamango</a> | <a href="[rlprotetor id='+ad4+']">Addfile</a> | <img class="alignnone wp-image-5150" src="https://www.imperiodownloads.xyz/wp-content/uploads/2017/11/25b6.png" alt="" width="12" height="12" /><a href="[rlprotetor id='+sd4+']">Sendit</a> | <a href="[rlprotetor id='+up4+']">Upfile</a></p><p style="text-align: center;"><strong>Dica: </strong>Use os servidores marcados com o "<img class="alignnone wp-image-5150" src="https://www.imperiodownloads.xyz/wp-content/uploads/2017/11/25b6.png" alt="" width="12" height="12" />" para assistir online, sem precisar baixar o filme!</p><hr /><p style="text-align: justify;">Sugestões? Dúvidas? Problemas? Deixe abaixo nos comentários! ?</p>';
+	}else if(modo==3){
+	document.getElementById("statu").innerHTML = 'Modo 720p.';
+	document.getElementById("fute").innerHTML = tit+' ('+an+') - Download em '+qu+' Dublado';
+	document.getElementById("ttlSeo").innerHTML = 'Baixar '+tit+' '+qu+' Dublado | Império Downloads';
+	document.getElementById("subtt").innerHTML = sub;
+	document.getElementById("sbtSeo").innerHTML = 'Em '+tit+', '+sub;
+	document.getElementById("gode").innerHTML = tit+', baixar '+tit+', Download '+tit+', Baixar '+tit+' '+qu+' Dublado, Download filmes gratis, baixar filmes dublado, download filme '+tit+' dublado '+an+ ' , download '+tit+' torrent, download filmes 2018, baixar filmes '+an;
+	document.getElementById("demo").innerHTML = '<p style="text-align: justify;">[bws_button name="SINOPSE" link="#" class="primary" size="expand" ]<br>'+si+'</p>[bws_button name="INFORMAÇÕES TÉCNICAS" link="#" class="primary" size="expand" ]<p style="text-align: center;"><br><b>Titulo Traduzido:</b> '+tit+'<br><b>Titulo Original:</b> '+titen+'<br><b>Ano de Lançamento:</b> '+an+'<br><b>Gênero:</b> '+ge+'<br><b>Idioma:</b> Português<br><b>Legenda:</b> S\L<br><b>Duração:</b> '+du+'<br><b>Tamanho:</b> '+ta+'<br><b>Resolução:</b> 1280*720<br><b>Qualidade:</b> '+qu+'<br><b>Extensão:</b> '+ex+'<br><b>Codec de Vídeo:</b> h264 / AVC<br><b>Codec de Áudio:</b> AC3 5.1<br><b>Áudio: 10</b><br><b>Vídeo: 10</b></p><p style="text-align: center;">[bws_button name="Download em 720p" link="#" class="primary" size="expand" ]<img class="alignnone wp-image-5150" src="https://www.imperiodownloads.xyz/wp-content/uploads/2017/11/25b6.png" alt="" width="12" height="12" /><a href="[rlprotetor id='+op7+']">Openload</a> | <a href="[rlprotetor id='+fc7+']">Filecloud</a> | <a href="[rlprotetor id='+fi7+']">1Fichier</a> | <img class="alignnone wp-image-5150" src="https://www.imperiodownloads.xyz/wp-content/uploads/2017/11/25b6.png" alt="" width="12" height="12" /><a href="[rlprotetor id='+st7+']">Streamango</a> | <a href="[rlprotetor id='+ad7+']">Addfile</a> | <img class="alignnone wp-image-5150" src="https://www.imperiodownloads.xyz/wp-content/uploads/2017/11/25b6.png" alt="" width="12" height="12" /><a href="[rlprotetor id='+sd7+']">Sendit</a> | <a href="[rlprotetor id='+up7+']">Upfile</a></p><p style="text-align: center;"><strong>Dica: </strong>Use os servidores marcados com o "<img class="alignnone wp-image-5150" src="https://www.imperiodownloads.xyz/wp-content/uploads/2017/11/25b6.png" alt="" width="12" height="12" />" para assistir online, sem precisar baixar o filme!</p><hr /><p style="text-align: justify;">Sugestões? Dúvidas? Problemas? Deixe abaixo nos comentários! ?</p>';
+	}else{alert('Você não selecionou um modo válido.');}
+	}
+	</script>
+	<p>
+	<center><button type="button" onclick="myFunction();" class="w3-button w3-border w3-hover-teal">Gerar códigos!</button></center>
+	</p>
+	<p id="statu"></p>
+	<div class="w3-row-padding">
+	<div class="w3-third">
+		Título
+		<textarea class="w3-input w3-border" id="fute"></textarea>
+	</div>
+	<div class="w3-third">
+		Post
+		<textarea class="w3-input w3-border" id="demo"></textarea>
+	</div>
+	<div class="w3-third">
+		Tags
+		<textarea class="w3-input w3-border" id="gode"></textarea>
+	</div>
+	<div class="w3-third">
+		<label>Subtítulo</label>
+		<textarea class="w3-input w3-border" id="subtt"></textarea>
+	</div>
+	<div class="w3-third">
+		<label>Título SEO</label>
+		<textarea class="w3-input w3-border" id="ttlSeo"></textarea>
+	</div>
+	<div class="w3-third">
+		<label>Sinopse SEO</label>
+		<textarea class="w3-input w3-border" id="sbtSeo"></textarea>
+	</div>
+	</div>
+	<p>Note que, se você não tiver preenchido todos os campos, precisará editar manualmente o código gerado.</p>
+	</div>
+	<footer class="w3-container w3-teal">
+	<p>Gerador de Posts. © 2018 João Pedro. <i>All rights reserved.</i></p>
+	</footer>
+</div>
+</div>
+<!-- Gerador de Posts GBA -->
+<!-- Gerador de Posts -->
+<div id="id02" class="w3-modal">
+<div class="w3-modal-content w3-card-4">
+	<header class="w3-container w3-teal">
+	<span onclick="document.getElementById('id02').style.display='none'" 
+	class="w3-button w3-display-topright">&times;</span>
+	<h2>Gerador de Posts GBA</h2>
+	</header>
+	<div class="w3-container">
+	<p>Gerar código HTML para Jogos, formatado no estilo de post usado no Império Downloads.</p>
+	<p>
+	<textarea placeholder="Informe o modo desejado." maxlength="1" rows="1" cols="1" class="w3-input" id="mod"></textarea><label>(1- GBA / 2- PSP)</label>
+	</p>
+	<h6>Informações gerais</h6>
+	<div class="w3-row-padding">
+	<div class="w3-half">
+		<label>Título da ROM</label>
+		<textarea class="w3-input w3-border" id="gtit"></textarea>
+	</div>
+	<div class="w3-half">
+		<label>Complemento do Título</label>
+		<textarea class="w3-input w3-border" id="gtiten"></textarea>
+	</div>
+	<div class="w3-half">
+		<label>Gênero do Jogo</label>
+		<textarea class="w3-input w3-border" id="gg"></textarea>
+	</div>
+	<div class="w3-half">
+		<label>Ano de Lançamento</label>
+		<textarea class="w3-input w3-border" id="ga"></textarea>
+	</div>
+	<div class="w3-half">
+		<label>Descrição</label>
+		<textarea class="w3-input w3-border" id="gs"></textarea>
+	</div>
+	<div class="w3-half">
+		<label>Subtítulo do Post</label>
+		<textarea class="w3-input w3-border" id="gsbt"></textarea>
+	</div>
+	<div class="w3-half">
+		<label>Origem (Oficial ou Hack ROM)</label>
+		<textarea class="w3-input w3-border" id="gd"></textarea>
+	</div>
+	<div class="w3-half">
+		<label>Idioma</label>
+		<textarea class="w3-input w3-border" id="gidio"></textarea>
+	</div>
+	</div>
+	<h6>Links de Download</h6>
+	<div class="w3-row-padding">
+	<div class="w3-half">
+		<label>1Fichier</label>
+		<textarea class="w3-input w3-border" id="gfi4"></textarea>
+	</div>
+	<div class="w3-half">
+		<label>Openload</label>
+		<textarea class="w3-input w3-border" id="gop4"></textarea>
+	</div>
+	<div class="w3-half">
+		<label>Sendit</label>
+		<textarea class="w3-input w3-border" id="gsd4"></textarea>
+	</div>
+	<div class="w3-half">
+		<label>Streamango</label>
+		<textarea class="w3-input w3-border" id="gst4"></textarea>
+	</div>
+	<div class="w3-half">
+		<label>Upfile</label>
+		<textarea class="w3-input w3-border" id="gup4"></textarea>
+	</div>
+	<div class="w3-half">
+		<label>Filecloud</label>
+		<textarea class="w3-input w3-border" id="gfc4"></textarea>
+	</div>
+	<div class="w3-half">
+		<label>Addfile</label>
+		<textarea class="w3-input w3-border" id="gup7"></textarea>
+	</div>
+	<div class="w3-half">
+		<label>Downace</label>
+		<textarea class="w3-input w3-border" id="gfc7"></textarea>
+	</div>
+	</div>
+	<script>
+	function myFunctiones() {
+	var atit = document.getElementById("gtit").value; 
+	var atiten = document.getElementById("gtiten").value;
+	var age = document.getElementById("gg").value;
+	var aan = document.getElementById("ga").value;
+	var aidio = document.getElementById("gidio").value;
+	var asi = document.getElementById("gs").value;
+	var asub = document.getElementById("gsbt").value;
+	var adu = document.getElementById("gd").value;
+	var aop4 = document.getElementById("gop4").value;
+	var afi4 = document.getElementById("gfi4").value;
+	var afc4 = document.getElementById("gfc4").value;
+	var ast4 = document.getElementById("gst4").value;
+	var asd4 = document.getElementById("gsd4").value;
+	var aup4 = document.getElementById("gup4").value;
+	var afc7 = document.getElementById("gfc7").value;
+	var aup7 = document.getElementById("gup7").value; 
+	var amodo = document.getElementById("mod").value;
+	if(amodo==1){
+	document.getElementById("gstatu").innerHTML = 'Modo GBA';
+	document.getElementById("gfute").innerHTML = atit+' ('+adu+'): '+atiten;
+	document.getElementById("gttlSeo").innerHTML = 'Baixar '+atit+' ('+adu+') | Império Downloads';
+	document.getElementById("gsubtt").innerHTML = asub;
+	document.getElementById("gsbtSeo").innerHTML = asub;
+	document.getElementById("ggode").innerHTML = atit+', baixar '+atit+', Download '+atit+', Baixar '+atit+' GBA, Download jogos GBA, baixar ROM HACK GBA, download JOGO '+atit+' GBA , download '+atit+' myboy, download GBA 2018, baixar jogos gameboy advanced ';
+	document.getElementById("gdemo").innerHTML = '<p style="text-align: justify;">[bws_button name="Descrição" link="#" class="primary" size="expand" ]<br>'+asi+'</p>[bws_button name="Informações Técnicas" link="#" class="primary" size="expand" ]<p style="text-align: center;"><br><b>Titulo da ROM:</b> '+atit+'<br><b>Ano de Lançamento:</b> '+aan+'<br><b>Gênero:</b> '+age+'<br><b>Idioma:</b> '+aidio+'<br><b>Oficial ou Hack:</b> '+adu+'<br></p><p style="text-align: center;">[bws_button name="Download da ROM" link="#" class="primary" size="expand" ]<a href="[rlprotetor id='+aop4+']">Openload</a> | <a href="[rlprotetor id='+afc4+']">Filecloud</a> | <a href="[rlprotetor id='+afi4+']">1Fichier</a> | <a href="[rlprotetor id='+ast4+']">Streamango</a> | <a href="[rlprotetor id='+aup7+']">Addfile</a> | <a href="[rlprotetor id='+afc7+']">Downace</a> | <a href="[rlprotetor id='+asd4+']">Sendit</a> | <a href="[rlprotetor id='+aup4+']">Upfile</a></p><hr /><p style="text-align: justify;">Sugestões? Dúvidas? Problemas? Deixe abaixo nos comentários! ?</p>';}
+	else if(amodo==2){
+	document.getElementById("gstatu").innerHTML = 'Modo PSP';
+	document.getElementById("gfute").innerHTML = atit+' ('+adu+'): '+atiten;
+	document.getElementById("gttlSeo").innerHTML = 'Baixar '+atit+' ('+adu+') | Império Downloads';
+	document.getElementById("gsubtt").innerHTML = asub;
+	document.getElementById("gsbtSeo").innerHTML = asub;
+	document.getElementById("ggode").innerHTML = atit+', baixar '+atit+', Download '+atit+', Baixar '+atit+' PSP, Download jogos PSP, baixar ROM HACK PSP, download JOGO '+atit+' PSP , download '+atit+' myboy, download PSP 2018, baixar jogos gameboy advanced ';
+	document.getElementById("gdemo").innerHTML = '<p style="text-align: justify;">[bws_button name="Descrição" link="#" class="primary" size="expand" ]<br>'+asi+'</p>[bws_button name="Informações Técnicas" link="#" class="primary" size="expand" ]<p style="text-align: center;"><br><b>Titulo da ROM:</b> '+atit+'<br><b>Ano de Lançamento:</b> '+aan+'<br><b>Gênero:</b> '+age+'<br><b>Idioma:</b> '+aidio+'<br><b>Oficial ou Hack:</b> '+adu+'<br></p><p style="text-align: center;">[bws_button name="Download da ROM" link="#" class="primary" size="expand" ]<a href="[rlprotetor id='+aop4+']">Openload</a> | <a href="[rlprotetor id='+afc4+']">Filecloud</a> | <a href="[rlprotetor id='+afi4+']">1Fichier</a> | <a href="[rlprotetor id='+ast4+']">Streamango</a> | <a href="[rlprotetor id='+aup7+']">Addfile</a> | <a href="[rlprotetor id='+afc7+']">Downace</a> | <a href="[rlprotetor id='+asd4+']">Sendit</a> | <a href="[rlprotetor id='+aup4+']">Upfile</a></p><hr /><p style="text-align: justify;">Sugestões? Dúvidas? Problemas? Deixe abaixo nos comentários! ?</p>';}else{alert('Você não selecionou um modo válido.');}
+	}
+	</script>
+	<p>
+	<center><button type="button" onclick="myFunctiones();" class="w3-button w3-border w3-hover-teal">Gerar códigos!</button></center>
+	</p>
+	<p id="gstatu"></p>
+	<div class="w3-row-padding">
+	<div class="w3-third">
+		Título
+		<textarea class="w3-input w3-border" id="gfute"></textarea>
+	</div>
+	<div class="w3-third">
+		Post
+		<textarea class="w3-input w3-border" id="gdemo"></textarea>
+	</div>
+	<div class="w3-third">
+		Tags
+		<textarea class="w3-input w3-border" id="ggode"></textarea>
+	</div>
+	<div class="w3-third">
+		<label>Subtítulo</label>
+		<textarea class="w3-input w3-border" id="gsubtt"></textarea>
+	</div>
+	<div class="w3-third">
+		<label>Título SEO</label>
+		<textarea class="w3-input w3-border" id="gttlSeo"></textarea>
+	</div>
+	<div class="w3-third">
+		<label>Sinopse SEO</label>
+		<textarea class="w3-input w3-border" id="gsbtSeo"></textarea>
+	</div>
+	</div>
+	<p>Note que, se você não tiver preenchido todos os campos, precisará editar manualmente o código gerado.</p>
+	</div>
+	<footer class="w3-container w3-teal">
+	<p>Gerador de Posts. © 2018 João Pedro. <i>All rights reserved.</i></p>
+	</footer>
+</div>
+</div>
