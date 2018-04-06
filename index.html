@@ -243,11 +243,21 @@
       <div class="w3-container">
          <p>Gerar código HTML formatado no estilo de post usado no Império Downloads.</p>
          <p>Gerar post para 
-         <select id="qnt_opcoes" class="w3-button">
-         	<option class="w3-bar-item w3-button" value="1">480p e 720p.</option>
-            <option class="w3-bar-item w3-button" value="2">480p apenas.</option>
-            <option class="w3-bar-item w3-button" value="3">720p apenas.</option>
-          </select>
+         <button class="w3-bar-item w3-button"  value="1" onclick='DefinirModoF(this)'>480p e 720p</button>
+         <button value="2"  class="w3-bar-item w3-button" onclick='DefinirModoF(this)'>480p apenas</button>
+         <button value="3" onclick='DefinirModoF(this)' class="w3-bar-item w3-button" >720p apenas</button>
+		 </p><p class="w3-center" id="resbtnf"></p>
+         <script>
+           function DefinirModoF(btn){  
+             modo=btn.value;
+             if (modo==1){
+             document.getElementById("resbtnf").innerHTML = 'Modo padrão. (480p e 720p)';}
+             else if (modo==2){
+             document.getElementById("resbtnf").innerHTML = 'Modo 480p.';}
+             else if (modo==3){
+             document.getElementById("resbtnf").innerHTML = 'Modo 720p.';}
+           }
+         </script>
          </p>
          <h6>Informações gerais</h6>
          <div class="w3-row-padding">
@@ -401,7 +411,6 @@
             var afile_720p = document.getElementById("afile_720p").value;
             var sendit_720p = document.getElementById("sd_720p").value;
             var upfile_720p = document.getElementById("upfile_720p").value; 
-            var modo = document.getElementById("qnt_opcoes").value;
             // Adicionados depois
             
             var ucloud_480p = document.getElementById("ucloud_480p").value;
@@ -530,10 +539,19 @@
       </header>
       <div class="w3-container">
          <p>Gerar código HTML para Jogos, formatado no estilo de post usado no Império Downloads.</p>
-         <p>
-            <textarea placeholder="Informe o modo desejado." maxlength="1" rows="1" cols="1" class="w3-input" id="mod"></textarea><label>(1- GBA / 2- PSP)</label>
-         </p>
-         <h6>Informações gerais</h6>
+         <p>Gerar post para 
+         <button class="w3-bar-item w3-button"  value="1" onclick='DefinirModo(this)'>ROM GBA</button>
+         <button value="2"  class="w3-bar-item w3-button" onclick='DefinirModo(this)'>ROM PSP</button></p>
+         <p id="resbtnj" class="w3-center"></p>
+         <script>
+           function DefinirModo(btn){  
+             amodo=btn.value;
+             if(amodo==1){document.getElementById("resbtnj").innerHTML = 'Modo GBA';}
+             else if(amodo==2){document.getElementById("resbtnj").innerHTML = 'Modo PSP';}
+             else {document.getElementById("resbtnj").innerHTML = '';}
+             
+           }
+         </script><h6>Informações gerais</h6>
          <div class="w3-row-padding">
             <div class="w3-half">
                <label>Título da ROM</label>
@@ -621,7 +639,6 @@
             var aupfile_480p = document.getElementById("gup_480p").value;
             var afcloud_720p = document.getElementById("gfc_720p").value;
             var aupfile_720p = document.getElementById("gup_720p").value; 
-            var amodo = document.getElementById("mod").value;
             if(amodo==1){
             document.getElementById("gstatu").innerHTML = 'Modo GBA';
             document.getElementById("gres_f1").innerHTML = atit+' ('+adu+'): '+atiten;
