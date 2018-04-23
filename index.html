@@ -142,6 +142,7 @@
          <a class=" w3-button" href="https://12h01.woDEMO.net" target="_blank">BLOG PESSOAL</a>
          <a href="#inxirido" onclick="document.getElementById('gerador_filmes').style.display='block'" class=" w3-button">GERADOR DE POSTS</a>
          <a href="#eleVai" onclick="document.getElementById('gerador_jogos').style.display='block'" class=" w3-button">GERADOR DE POSTS GBA</a>
+         <a href="#bosco" onclick="document.getElementById('gerador_twitter').style.display='block'" class=" w3-button">GERADOR DE NICKS TWITTER</a>
       </div>
       <!-- Seção de Contato -->
       <div class="w3-container w3-center w3-light-grey" style="padding:128px 16px" id="contact">
@@ -719,4 +720,107 @@
          <p>Gerador de Posts. © 2018 João Pedro. <i>All rights reserved.</i></p>
       </footer>
    </div>
+</div>
+
+==========================================================================================================================
+===========================================================================================================================
+================================================
+<div id="gerador_twitter" class="w3-modal">
+<style>
+/* Estilos da Página */
+#body{
+  background: linear-gradient(to bottom right, purple, red);
+    background-repeat:no-repeat;
+    background-size:100% 100%;
+  color:white;
+  text-align:center;
+}
+#hidel{
+  display:none;
+}
+button {
+    float: center;
+    background-color:transparent;
+    color: white;
+    padding:10px;
+    border: 0px solid green;
+}
+button:hover {
+    background-color:white;
+    color: purple;
+    padding:10px;
+    border: 0px solid green;
+}
+
+a{text-decoration:none;color:white;}
+</style>
+<div id="body">
+<h2>Nick Conjugator</h2> 
+<p>Criador: João Pedro<br>
+Data: 22/abr/2018</p>
+
+<p><select id="hidel">
+  <option>Apple</option>
+</select>
+Número de sufixos: <span id="suff"></span><br><button onclick="aumentar()">Aumentar &uarr;</button><button onclick="dirimir()">&darr; Diminuir</button></p>
+
+<p><button onclick="executar()">Iniciar!</button></p>
+
+<p><span id="resultados"></span></p>
+<script>
+  document.getElementById("suff").innerHTML = hidel.length;
+  
+  function aumentar() {
+    var x = document.createElement("OPTION");
+    x.setAttribute("value", "volvocar");
+    var t = document.createTextNode("Volvo");
+    x.appendChild(t);
+    document.getElementById("hidel").appendChild(x);
+  document.getElementById("suff").innerHTML = hidel.length;
+  }
+  
+  function dirimir() {
+    var x = document.getElementById("hidel");
+    x.remove(x.selectedIndex);
+      document.getElementById("suff").innerHTML = hidel.length;
+  }
+  
+  function executar(){
+    var text = "";
+    var par = " ";
+    var user = prompt("Parte comum (Infixo)\nex.: jujubar = juju"); 
+    var jake = document.getElementById("suff").innerHTML = hidel.length;
+    var arr = [];     
+    var sites = [];
+    var finn;// define our array
+    for (var i = 0; i < jake; i++)
+        {              // loop some times
+          arr.push(prompt('Sufixo ' + (i+1) + '\n(ex.: "jujubar", informe bar.)' )); 
+        }
+    finn = "";
+
+    // Unir todos os sufixos p/ preench. formulário
+    for (i = 0; i < jake; i++) 
+        {
+          finn += arr[i] + " ";
+        }
+
+    // Abrir nova janela para cada final
+    par += '<p>';
+    for (i = 0; i < jake; i++) 
+        {
+          finn = arr[i];
+          var text = user.concat(finn);
+          sites[i] = "https://twitter.com/"+text;
+          par += '<span class="w3-tag"><a target="_blank" href="https://twitter.com/'+text+'">'+text+'</a></span> ';
+        }
+    par += '</p><p>Dica: Pressione <span class="w3-tag w3-white">Ctrl</span> enquanto clica para abrir os links em uma nova aba!'
+    // Preencimento dos Resultados
+    document.getElementById("resultados").innerHTML = par;  
+  }  
+</script>
+	<footer class="w3-container">
+         <p>Gerador de Nicks. © 2018 João Pedro. <i>All rights reserved.</i></p>
+         <span onclick="document.getElementById('gerador_filmes').style.display='none'" class="w3-button">Fechar página &times;</span>
+    </footer>
 </div>
