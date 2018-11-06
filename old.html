@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>João Pedro</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Indie+Flower">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin+Sans">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+  h1,h2,h3,h4,h5,h6 {
+    font-family: "Indie Flower", sans-serif
+  }
+  body{
+    font-family: "Josefin Sans", sans-serif
+  }
+  body, html {
+    height: 100%;
+    line-height: 1.8;
+  }
+  .cabecalho {
+    background-position: center;
+    background-size: cover;
+    min-height: 100%;
+    background-color: teal;
+  }
+  .w3-bar .w3-button {
+    padding: 16px;
+  }
+</style>
+</head>
+<body>
+<div class="w3-top">
+<div class="w3-bar w3-white w3-card" id="Navbar">
+<a href="#home" class="w3-bar-item w3-button w3-wide">JOAOPEDRO</a>
+</div>
+</div>
+
+<!-- Cabeçalho do Site -->
+<header class="cabecalho w3-display-container w3-grayscale-min" id="home">
+<div class="w3-display-left w3-text-white" style="padding:48px">
+<span class="w3-jumbo w3-hide-small">Oi :)</span><br>
+<span class="w3-xxlarge w3-hide-large w3-hide-medium">Bem vindo :)</span><br>
+<span class="w3-large">Esse é a minha página pessoal.<br><i>Here's a little page I wrote<br>You might want to read it note for note<br>Don't worry, be happy.</i></span>
+</div>
+</header>
+<div class="w3-container w3-center" style="padding-top:64px;padding-right:128px;padding-left:128px;padding-bottom:64px;" id="about">
+<h1 class="w3-center"><b>Site do <span class="w3-tag">João Pedro</span></b></h1>
+Página pessoal, para fins pessoais, e de conteúdo pessoal.
+</div>
+
+
+<!-- Seção de estatísticas sobre o curso de Matemática -->
+<div class="w3-container w3-row w3-center w3-dark-grey w3-padding-64">
+<p class="w3-center w3-large">Meu estado no curso de Matemática (em Abril/2018)</p>
+<div class="w3-third">
+<span class="w3-xxlarge">19</span>
+<br>Disciplinas cursadas
+</div>
+<div class="w3-third">
+<span class="w3-xxlarge">980h</span>
+<br>Carga horária
+</div>
+<div class="w3-third">
+<span class="w3-xxlarge">8,04</span>
+<br>Índice de Rendimento Acadêmico
+</div>
+</div>
+<!-- Atalhos para meus projetos.
+O código fonte dos projetos imbutidos nessa página encontram-se após o fim do código desta. -->
+<div class="w3-container w3-center" style="padding:128px 16px" id="pricing">
+<h3>MEUS PROJETOS E OUTRAS COISAS...</h3>
+<a class=" w3-button" href="https://12h01.woDEMO.net" target="_blank">BLOG PESSOAL</a>
+<a href="#inxirido" onclick="document.getElementById('gerador_filmes').style.display='block'" class=" w3-button">GERADOR DE POSTS</a>
+<a href="#eleVai" onclick="document.getElementById('gerador_jogos').style.display='block'" class=" w3-button">GERADOR DE POSTS GBA</a>
+<a href="#bosco" onclick="document.getElementById('gerador_twitter').style.display='block'" class=" w3-button">GERADOR DE NICKS TWITTER</a>
+
+<div class="w3-panel w3-card w3-light-grey">
+  <h3>Corrigir alinhamento de texto no XFCE</h3>
+  <div class="w3-code notranslate">
+    xfconf-query -c xfce4-desktop -p /desktop-icons/center-text -n -t bool -s false  
+  </div>
+</div>
+
+<div class="w3-panel w3-card w3-light-grey">
+  <h3>Aplicar tema GTK via linha de comando</h3>
+  <div class="w3-code notranslate">
+    gconftool-2 --type=string -s /desktop/gnome/interface/gtk_theme Windows10Theme
+  </div>
+</div>
+</div>
+<!-- Seção de Contato -->
+<div class="w3-container w3-center w3-light-grey" style="padding:128px 16px" id="contact">
+<h3 >CONTATO</h3>
+<p class="w3-large">Precisa falar comigo? Aqui está meu contato!</p>
+<p><i class="fa fa-whatsapp fa-fw "></i>/<i class="fa fa-phone fa-fw w3-margin-right"></i> (88) 98818-0440</p>
+<p><i class="fa fa-envelope fa-fw w3-margin-right"> </i> carinhadov3@hotmail.com</p>
+</div>
+<!-- Fundo -->
+<footer class="w3-center w3-black w3-padding-64">
+<p><a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>Voltar ao topo</a></p>
+<p>© 2018 João Pedro. <i>All rights reserved.</i></p>
+<p>Página criada algumas semanas antes do dia 05/04/2018. Provavelmente numa segunda-feira.</p>
+<p>Hospedado gratuitamente pelo Github. Vlw!</p>
+</footer>
+<!-- Scripts vitais ao funcionamento normal da página.
+NÃO MEXA EM NADA A MENOS QUE SAIBA O QUE ESTÁ FAZENDO -->
+<script>
+// Mostrar ou ocultar a barra lateral ao clicar no ícone de menu
+var menu_lateral = document.getElementById("menu_lateral");
+function openTcheca() {
+if (menu_lateral.style.display === 'block') {
+menu_lateral.style.display = 'none';
+} else {
+menu_lateral.style.display = 'block';
+}
+}
+// Fechar o menu lateral
+function closeTcheca() {
+menu_lateral.style.display = "none";
+}
+</script>
+</body>
+</html>
+<!-- A página acaba aqui. 
+A partir de agora encontra-se o código dos projetos.
+
+_____                    _____                    _____                    _____                    _____                   _______         
+/\    \                  /\    \                  /\    \                  /\    \                  /\    \                 /::\    \        
+/::\    \                /::\    \                /::\    \                /::\    \                /::\    \               /::::\    \       
+\:::\    \              /::::\    \              /::::\    \              /::::\    \              /::::\    \             /::::::\    \      
+\:::\    \            /::::::\    \            /::::::\    \            /::::::\    \            /::::::\    \           /::::::::\    \     
+\:::\    \          /:::/\:::\    \          /:::/\:::\    \          /:::/\:::\    \          /:::/\:::\    \         /:::/~~\:::\    \    
+\:::\    \        /:::/__\:::\    \        /:::/__\:::\    \        /:::/  \:::\    \        /:::/__\:::\    \       /:::/    \:::\    \   
+/::::\    \      /::::\   \:::\    \      /::::\   \:::\    \      /:::/    \:::\    \      /::::\   \:::\    \     /:::/    / \:::\    \  
+_____   /::::::\    \    /::::::\   \:::\    \    /::::::\   \:::\    \    /:::/    / \:::\    \    /::::::\   \:::\    \   /:::/____/   \:::\____\ 
+/\    \ /:::/\:::\    \  /:::/\:::\   \:::\____\  /:::/\:::\   \:::\    \  /:::/    /   \:::\ ___\  /:::/\:::\   \:::\____\ |:::|    |     |:::|    |
+/::\    /:::/  \:::\____\/:::/  \:::\   \:::|    |/:::/__\:::\   \:::\____\/:::/____/     \:::|    |/:::/  \:::\   \:::|    ||:::|____|     |:::|    |
+\:::\  /:::/    \::/    /\::/    \:::\  /:::|____|\:::\   \:::\   \::/    /\:::\    \     /:::|____|\::/   |::::\  /:::|____| \:::\    \   /:::/    / 
+\:::\/:::/    / \/____/  \/_____/\:::\/:::/    /  \:::\   \:::\   \/____/  \:::\    \   /:::/    /  \/____|:::::\/:::/    /   \:::\    \ /:::/    /  
+\::::::/    /                    \::::::/    /    \:::\   \:::\    \       \:::\    \ /:::/    /         |:::::::::/    /     \:::\    /:::/    /   
+\::::/    /                      \::::/    /      \:::\   \:::\____\       \:::\    /:::/    /          |::|\::::/    /       \:::\__/:::/    /    
+\::/    /                        \::/____/        \:::\   \::/    /        \:::\  /:::/    /           |::| \::/____/         \::::::::/    /     
+\/____/                          ~~               \:::\   \/____/          \:::\/:::/    /            |::|  ~|                \::::::/    /      
+   \:::\    \               \::::::/    /             |::|   |                 \::::/    /       
+    \:::\____\               \::::/    /              \::|   |                  \::/____/        
+     \::/    /                \::/____/                \:|   |                   ~~              
+      \/____/                  ~~                       \|___|                                   
+                                                                                                 
+            PROJETOS criados por J. Pedro
+-->
+<!-- Gerador de Posts 
+o__ __o                                                  o                          
+/v     v\                                                <|>                         
+/>       <\                                               < \                         
+o/                 o__  __o   \o__ __o     o__ __o/    o__ __o/    o__ __o    \o__ __o  
+<|       _\__o__   /v      |>   |     |>   /v     |    /v     |    /v     v\    |     |> 
+\\          |    />      //   / \   < >  />     / \  />     / \  />       <\  / \   < > 
+\         /    \o    o/     \o/        \      \o/  \      \o/  \         /  \o/       
+o       o      v\  /v __o   |          o      |    o      |    o       o    |        
+<\__ __/>       <\/> __/>  / \         <\__  / \   <\__  / \   <\__ __/>   / \       
+                               
+                               
+                               
+o                     o__ __o                           o                        
+<|>                   <|     v\                         <|>                       
+< \                   / \     <\                        < >                       
+o__ __o/    o__  __o       \o/     o/   o__ __o       __o__   |          __o__         
+/v     |    /v      |>       |__  _<|/  /v     v\     />  \    o__/_     />  \          
+/>     / \  />      //        |         />       <\    \o       |         \o             
+\      \o/  \o    o/         <o>        \         /     v\      |          v\            
+o      |    v\  /v __o       |          o       o       <\     o           <\           
+<\__  / \    <\/> __/>      / \         <\__ __/>  _\o__</     <\__   _\o__</           
+                               
+                               
+Codenome Inxirido. Criado em Março/2018 visando aumentar minha produtividade na criação de posts para o Império Downloads.
+Versão inicial, apenas com opções para posts de filmes.
+Invés de adicionar suporte para GBA e outras opções, decidi deixar o projeto funcional apenas para filmes.
+Qualquer futura atualização será apenas para atualização no modelo de post.
+
+-->
+<div id="gerador_filmes" class="w3-modal">
+<div class="w3-modal-content w3-card-_480p">
+<header class="w3-container w3-teal">
+<span onclick="document.getElementById('gerador_filmes').style.display='none'" 
+class="w3-button w3-display-topright">&times;</span>
+<h2>GERADOR DE POSTS</h2>
+</header>
+<div class="w3-container">
+<p>Gerar código HTML formatado no estilo de post usado no Império Downloads.</p>
+<p>Gerar post para 
+<button class="w3-bar-item w3-button"  value="1" onclick='DefinirModoF(this)'>480p e 720p</button>
+<button value="2"  class="w3-bar-item w3-button" onclick='DefinirModoF(this)'>480p apenas</button>
+<button value="3" onclick='DefinirModoF(this)' class="w3-bar-item w3-button" >720p apenas</button>
+</p><p class="w3-center" id="resbtnf"></p>
+<script>
+function DefinirModoF(btn){  
+modo=btn.value;
+if (modo==1){
+document.getElementById("resbtnf").innerHTML = 'Modo padrão. (480p e 720p)';}
+else if (modo==2){
+document.getElementById("resbtnf").innerHTML = 'Modo 480p.';}
+else if (modo==3){
+document.getElementById("resbtnf").innerHTML = 'Modo 720p.';}
+}
+</script>
+</p>
+<h6>Informações gerais</h6>
+<div class="w3-row-padding">
+<div class="w3-half">
+<label>Título do Filme</label>
+<textarea class="w3-input w3-border" id="titulo_f"></textarea>
+</div>
+<div class="w3-half">
+<label>Título Original</label>
+<textarea class="w3-input w3-border" id="title_f"></textarea>
+</div>
+<div class="w3-half">
+<label>Gênero</label>
+<textarea class="w3-input w3-border" id="gen_f"></textarea>
+</div>
+<div class="w3-half">
+<label>Ano</label>
+<textarea class="w3-input w3-border" id="ano_f"></textarea>
+</div>
+<div class="w3-half">
+<label>Sinopse</label>
+<textarea class="w3-input w3-border" id="sinopse_f"></textarea>
+</div>
+<div class="w3-half">
+<label>Subtítulo</label>
+<textarea class="w3-input w3-border" id="subtitulo_f"></textarea>
+</div>
+<div class="w3-half">
+<label>Duração</label>
+<textarea class="w3-input w3-border" id="dur_f"></textarea>
+</div>
+<div class="w3-half">
+<label>Tamanho</label>
+<textarea class="w3-input w3-border" id="tam_f"></textarea>
+</div>
+<div class="w3-half">
+<label>Qualidade</label>
+<textarea class="w3-input w3-border" id="qualidade_f"></textarea>
+</div>
+<div class="w3-half">
+<label>Extensão</label>
+<textarea class="w3-input w3-border" id="ext_f"></textarea>
+</div>
+</div>
+<h6>Links de Download</h6>
+<div class="w3-row-padding">
+<div class="w3-half">
+<label>Downace 480p</label>
+<textarea class="w3-input w3-border" id="dwnace_480p"></textarea>
+</div>
+<div class="w3-half">
+<label>Downace 720p</label>
+<textarea class="w3-input w3-border" id="dwnace_720p"></textarea>
+</div>
+<div class="w3-half">
+<label>Openload 480p</label>
+<textarea class="w3-input w3-border" id="op_480p"></textarea>
+</div>
+<div class="w3-half">
+<label>Openload 720p</label>
+<textarea class="w3-input w3-border" id="op_720p"></textarea>
+</div>
+<div class="w3-half">
+<label>Filecloud 480p</label>
+<textarea class="w3-input w3-border" id="fcloud_480p"></textarea>
+</div>
+<div class="w3-half">
+<label>Filecloud 720p</label>
+<textarea class="w3-input w3-border" id="fcloud_720p"></textarea>
+</div>
+<div class="w3-half">
+<label>Rapidvideo 480p</label>
+<textarea class="w3-input w3-border" id="rvideo_480p"></textarea>
+</div>
+<div class="w3-half">
+<label>Rapidvideo 720p</label>
+<textarea class="w3-input w3-border" id="rvideo_720p"></textarea>
+</div>
+<div class="w3-half">
+<label>Sendit 480p</label>
+<textarea class="w3-input w3-border" id="sd_480p"></textarea>
+</div>
+<div class="w3-half">
+<label>Sendit 720p</label>
+<textarea class="w3-input w3-border" id="sd_720p"></textarea>
+</div>
+<div class="w3-half">
+<label>Streamango 480p</label>
+<textarea class="w3-input w3-border" id="st_480p"></textarea>
+</div>
+<div class="w3-half">
+<label>Streamango 720p</label>
+<textarea class="w3-input w3-border" id="st_720p"></textarea>
+</div>
+<div class="w3-half">
+<label>Userscloud 480p</label>
+<textarea class="w3-input w3-border" id="ucloud_480p"></textarea>
+</div>
+<div class="w3-half">
+<label>Userscloud 720p</label>
+<textarea class="w3-input w3-border" id="ucloud_720p"></textarea>
+</div>
+<div class="w3-half">
+<label>Upfile 480p</label>
+<textarea class="w3-input w3-border" id="upfile_480p"></textarea>
+</div>
+<div class="w3-half">
+<label>Upfile 720p</label>
+<textarea class="w3-input w3-border" id="upfile_720p"></textarea>
+</div>
+<div class="w3-half">
+<label>Addfile 480p</label>
+<textarea class="w3-input w3-border" id="afile_480p"></textarea>
+</div>
+<div class="w3-half">
+<label>Addfile 720p</label>
+<textarea class="w3-input w3-border" id="afile_720p"></textarea>
+</div>
+<div class="w3-half">
+<label>9Files 480p</label>
+<textarea class="w3-input w3-border" id="fi_480p"></textarea>
+</div>
+<div class="w3-half">
+<label>9Files 720p</label>
+<textarea class="w3-input w3-border" id="fi_720p"></textarea>
+</div>
+<div class="w3-half">
+<label>Embed 480p</label>
+<textarea class="w3-input w3-border" id="emb_480p" placeholder="Link do Mirrorace..."></textarea>
+</div>
+<div class="w3-half">
+<label>Embed 720p</label>
+<textarea class="w3-input w3-border" placeholder="Link do Mirrorace..." id="emb_720p"></textarea>
+</div><div class="w3-half">
+<label>I.Play 480p</label>
+<textarea class="w3-input w3-border" id="iplay_480p" placeholder="Link da Entry..."></textarea>
+</div>
+<div class="w3-half">
+<label>I.Play 720p</label>
+<textarea class="w3-input w3-border" placeholder="Link da Entry..." id="iplay_720p"></textarea>
+</div>
+</div>
+<script>
+function myFunction() {
+var tit = document.getElementById("titulo_f").value; 
+var titen = document.getElementById("title_f").value;
+var ge = document.getElementById("gen_f").value;
+var an = document.getElementById("ano_f").value;
+var si = document.getElementById("sinopse_f").value;
+var sub = document.getElementById("subtitulo_f").value;
+var du = document.getElementById("dur_f").value;
+var ta = document.getElementById("tam_f").value;
+var qu = document.getElementById("qualidade_f").value;
+var ex = document.getElementById("ext_f").value;
+var oload_480p = document.getElementById("op_480p").value;
+var fichier_480p = document.getElementById("fi_480p").value;
+var fcloud_480p = document.getElementById("fcloud_480p").value;
+var smango_480p = document.getElementById("st_480p").value;
+var afile_480p = document.getElementById("afile_480p").value;
+var sendit_480p = document.getElementById("sd_480p").value;
+var upfile_480p = document.getElementById("upfile_480p").value;
+var oload_720p = document.getElementById("op_720p").value;
+var fichier_720p = document.getElementById("fi_720p").value;
+var fcloud_720p = document.getElementById("fcloud_720p").value;
+var smango_720p = document.getElementById("st_720p").value;
+var afile_720p = document.getElementById("afile_720p").value;
+var sendit_720p = document.getElementById("sd_720p").value;
+var upfile_720p = document.getElementById("upfile_720p").value; 
+// Adicionados depois
+
+var ucloud_480p = document.getElementById("ucloud_480p").value;
+var ucloud_720p = document.getElementById("ucloud_720p").value;
+
+var emb_480p = document.getElementById("emb_480p").value;
+var emb_720p = document.getElementById("emb_720p").value;
+var iplay_480p = document.getElementById("iplay_480p").value;
+var iplay_720p = document.getElementById("iplay_720p").value;
+
+var downace_480p = document.getElementById("dwnace_480p").value;
+var downace_720p = document.getElementById("dwnace_720p").value;
+
+
+var rvideo_480p = document.getElementById("rvideo_480p").value;
+var rvideo_720p = document.getElementById("rvideo_720p").value;
+if(modo==1){
+document.getElementById("statu").innerHTML = 'Modo padrão. (480p e 720p)';
+document.getElementById("res_f1").innerHTML = tit+' ('+an+') - Download em '+qu+' Dublado';
+document.getElementById("res_f5").innerHTML = 'Baixar '+tit+' '+qu+' Dublado | Império Downloads';
+document.getElementById("res_f4").innerHTML = sub;
+document.getElementById("res_f7").innerHTML = '<p><b>'+tit+'</b><br><i>Dublado | 720p</i></p></div></div><div class="JPlus1 w3-center w3-padding-8"><b>Clique em um dos servidores abaixo para reproduzir o filme!</b><br><iframe src="'+emb_720p+'" width="100%" height="360" scrolling="no" frameborder="0"  allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe></div>';
+document.getElementById("res_f6").innerHTML = 'Em '+tit+', '+sub;
+document.getElementById("res_f3").innerHTML = tit+', baixar '+tit+', Download '+tit+', Baixar '+tit+' '+qu+' Dublado, Download filmes gratis, baixar filmes dublado, download filme '+tit+' dublado '+an+ ' , download '+tit+' torrent, download filmes 2018, baixar filmes '+an;
+document.getElementById("res_f2").innerHTML = '<p style="text-align: justify;">[bws_button name="SINOPSE" link="#" class="primary" size="expand" ]<br>'+si+'</p>[bws_button name="INFORMAÇÕES TÉCNICAS" link="#" class="primary" size="expand" ]<p style="text-align: center;"><br><b>Titulo Traduzido:</b> '+tit+'<br><b>Titulo Original:</b> '+titen+'<br><b>Ano de Lançamento:</b> '+an+'<br><b>Gênero:</b> '+ge+'<br><b>Idioma:</b> Português<br><b>Legenda:</b> S\L<br><b>Duração:</b> '+du+'<br><b>Tamanho:</b> '+ta+'<br><b>Resolução:</b> 854*480 / 1280*720<br><b>Qualidade:</b> '+qu+'<br><b>Extensão:</b> '+ex+'<br><b>Codec de Vídeo:</b> h264 / AVC<br><b>Codec de Áudio:</b> AC3 5.1<br><b>Áudio: 10</b><br><b>Vídeo: 10</b></p><p style="text-align: center;">[bws_button name="Download em 480p" link="#" class="primary" size="expand" ]<img class="alignnone wp-image-5150" src="https://www.imperiodownloads.xyz/wp-content/uploads/2017/11/25b6.png" alt="" width="12" height="12" /><a href="[rlprotetor id='+iplay_480p+']">Assistir Online!</a> | <a href="[rlprotetor id='+oload_480p+']">Openload</a> | <a href="[rlprotetor id='+fcloud_480p+']">Filecloud</a> | <a href="[rlprotetor id='+fichier_480p+']">9Files</a> | <a href="[rlprotetor id='+smango_480p+']">Streamango</a> | <a href="[rlprotetor id='+rvideo_480p+']">Rapidvideo</a> | <a href="[rlprotetor id='+downace_480p+']">Downace</a> | <a href="[rlprotetor id='+ucloud_480p+']">Userscloud</a> | <a href="[rlprotetor id='+afile_480p+']">Addfile</a> | <a href="[rlprotetor id='+sendit_480p+']">Sendit</a> | <a href="[rlprotetor id='+upfile_480p+']">Upfile</a></p><p style="text-align: center;">[bws_button name="Download em 720p" link="#" class="primary" size="expand" ]<img class="alignnone wp-image-5150" src="https://www.imperiodownloads.xyz/wp-content/uploads/2017/11/25b6.png" alt="" width="12" height="12" /><a href="[rlprotetor id='+iplay_720p+']">Assistir Online!</a> | <a href="[rlprotetor id='+oload_720p+']">Openload</a> | <a href="[rlprotetor id='+rvideo_720p+']">Rapidvideo</a> | <a href="[rlprotetor id='+downace_720p+']">Downace</a> | <a href="[rlprotetor id='+ucloud_720p+']">Userscloud</a> | <a href="[rlprotetor id='+fcloud_720p+']">Filecloud</a> | <a href="[rlprotetor id='+fichier_720p+']">9Files</a> | <a href="[rlprotetor id='+smango_720p+']">Streamango</a> | <a href="[rlprotetor id='+afile_720p+']">Addfile</a> | <a href="[rlprotetor id='+sendit_720p+']">Sendit</a> | <a href="[rlprotetor id='+upfile_720p+']">Upfile</a></p><hr /><p style="text-align: justify;">Sugestões? Dúvidas? Problemas? Deixe abaixo nos comentários!</p>';}
+else if(modo==2){
+document.getElementById("statu").innerHTML = 'Modo 480p.';
+document.getElementById("res_f7").innerHTML = '<p><b>'+tit+'</b><br><i>Dublado | 480p</i></p></div></div><div class="JPlus1 w3-center w3-padding-8"><b>Clique em um dos servidores abaixo para reproduzir o filme!</b><br><iframe src="'+emb_480p+'" width="100%" height="360" scrolling="no" frameborder="0"  allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe></div>';
+document.getElementById("res_f1").innerHTML = tit+' ('+an+') - Download em 480p Dublado';
+document.getElementById("res_f5").innerHTML = 'Baixar '+tit+' 480p Dublado | Império Downloads';
+document.getElementById("res_f4").innerHTML = sub;
+document.getElementById("res_f6").innerHTML = 'Em '+tit+', '+sub;
+document.getElementById("res_f3").innerHTML = tit+', baixar '+tit+', Download '+tit+', Baixar '+tit+' '+qu+' Dublado, Download filmes gratis, baixar filmes dublado, download filme '+tit+' dublado '+an+ ' , download '+tit+' torrent, download filmes 2018, baixar filmes '+an;
+document.getElementById("res_f2").innerHTML = '<p style="text-align: justify;">[bws_button name="SINOPSE" link="#" class="primary" size="expand" ]<br>'+si+'</p>[bws_button name="INFORMAÇÕES TÉCNICAS" link="#" class="primary" size="expand" ]<p style="text-align: center;"><br><b>Titulo Traduzido:</b> '+tit+'<br><b>Titulo Original:</b> '+titen+'<br><b>Ano de Lançamento:</b> '+an+'<br><b>Gênero:</b> '+ge+'<br><b>Idioma:</b> Português<br><b>Legenda:</b> S\L<br><b>Duração:</b> '+du+'<br><b>Tamanho:</b> '+ta+'<br><b>Resolução:</b> 854*480<br><b>Qualidade:</b> '+qu+'<br><b>Extensão:</b> '+ex+'<br><b>Codec de Vídeo:</b> h264 / AVC<br><b>Codec de Áudio:</b> AC3 5.1<br><b>Áudio: 10</b><br><b>Vídeo: 10</b></p><p style="text-align: center;">[bws_button name="Download em 480p" link="#" class="primary" size="expand" ]<img class="alignnone wp-image-5150" src="https://www.imperiodownloads.xyz/wp-content/uploads/2017/11/25b6.png" alt="" width="12" height="12" /><a href="[rlprotetor id='+iplay_480p+']">Assistir Online!</a> | <a href="[rlprotetor id='+oload_480p+']">Openload</a> | <a href="[rlprotetor id='+rvideo_480p+']">Rapidvideo</a> | <a href="[rlprotetor id='+downace_480p+']">Downace</a> | <a href="[rlprotetor id='+ucloud_480p+']">Userscloud</a> | <a href="[rlprotetor id='+fcloud_480p+']">Filecloud</a> | <a href="[rlprotetor id='+fichier_480p+']">9Files</a> | <a href="[rlprotetor id='+smango_480p+']">Streamango</a> | <a href="[rlprotetor id='+afile_480p+']">Addfile</a> | <a href="[rlprotetor id='+sendit_480p+']">Sendit</a> | <a href="[rlprotetor id='+upfile_480p+']">Upfile</a></p><hr /><p style="text-align: justify;">Sugestões? Dúvidas? Problemas? Deixe abaixo nos comentários! ?</p>';
+}else if(modo==3){
+document.getElementById("statu").innerHTML = 'Modo 720p.';
+document.getElementById("res_f1").innerHTML = tit+' ('+an+') - Download em '+qu+' Dublado';
+document.getElementById("res_f5").innerHTML = 'Baixar '+tit+' '+qu+' Dublado | Império Downloads';
+document.getElementById("res_f4").innerHTML = sub;
+document.getElementById("res_f7").innerHTML = '<p><b>'+tit+'</b><br><i>Dublado | 720p</i></p></div></div><div class="JPlus1 w3-center w3-padding-8"><b>Clique em um dos servidores abaixo para reproduzir o filme!</b><br><iframe src="'+emb_720p+'" width="100%" height="360" scrolling="no" frameborder="0"  allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe></div>';
+document.getElementById("res_f6").innerHTML = 'Em '+tit+', '+sub;
+document.getElementById("res_f3").innerHTML = tit+', baixar '+tit+', Download '+tit+', Baixar '+tit+' '+qu+' Dublado, Download filmes gratis, baixar filmes dublado, download filme '+tit+' dublado '+an+ ' , download '+tit+' torrent, download filmes 2018, baixar filmes '+an;
+document.getElementById("res_f2").innerHTML = '<p style="text-align: justify;">[bws_button name="SINOPSE" link="#" class="primary" size="expand" ]<br>'+si+'</p>[bws_button name="INFORMAÇÕES TÉCNICAS" link="#" class="primary" size="expand" ]<p style="text-align: center;"><br><b>Titulo Traduzido:</b> '+tit+'<br><b>Titulo Original:</b> '+titen+'<br><b>Ano de Lançamento:</b> '+an+'<br><b>Gênero:</b> '+ge+'<br><b>Idioma:</b> Português<br><b>Legenda:</b> S\L<br><b>Duração:</b> '+du+'<br><b>Tamanho:</b> '+ta+'<br><b>Resolução:</b> 1280*720<br><b>Qualidade:</b> '+qu+'<br><b>Extensão:</b> '+ex+'<br><b>Codec de Vídeo:</b> h264 / AVC<br><b>Codec de Áudio:</b> AC3 5.1<br><b>Áudio: 10</b><br><b>Vídeo: 10</b></p><p style="text-align: center;">[bws_button name="Download em 720p" link="#" class="primary" size="expand" ]<img class="alignnone wp-image-5150" src="https://www.imperiodownloads.xyz/wp-content/uploads/2017/11/25b6.png" alt="" width="12" height="12" /><a href="[rlprotetor id='+iplay_480p+']">Assistir Online!</a> | <a href="[rlprotetor id='+oload_720p+']">Openload</a> | <a href="[rlprotetor id='+rvideo_720p+']">Rapidvideo</a> | <a href="[rlprotetor id='+downace_720p+']">Downace</a> | <a href="[rlprotetor id='+ucloud_720p+']">Userscloud</a> | <a href="[rlprotetor id='+fcloud_720p+']">Filecloud</a> | <a href="[rlprotetor id='+fichier_720p+']">9Files</a> | <a href="[rlprotetor id='+smango_720p+']">Streamango</a> | <a href="[rlprotetor id='+afile_720p+']">Addfile</a> | <a href="[rlprotetor id='+sendit_720p+']">Sendit</a> | <a href="[rlprotetor id='+upfile_720p+']">Upfile</a></p><p style="text-align: justify;">Sugestões? Dúvidas? Problemas? Deixe abaixo nos comentários! ?</p>';
+}else{alert('Você não selecionou um modo válido.');}
+}
+</script>
+<p>
+<center><button type="button" onclick="myFunction();" class="w3-button w3-border w3-hover-teal">Gerar códigos!</button></center>
+</p>
+<p id="statu"></p>
+<div class="w3-row-padding">
+<div class="w3-third">
+Título
+<textarea class="w3-input w3-border" id="res_f1"></textarea>
+</div>
+<div class="w3-third">
+Post
+<textarea class="w3-input w3-border" id="res_f2"></textarea>
+</div>
+<div class="w3-third">
+Tags
+<textarea class="w3-input w3-border" id="res_f3"></textarea>
+</div>
+<div class="w3-third">
+<label>Subtítulo</label>
+<textarea class="w3-input w3-border" id="res_f4"></textarea>
+</div>
+<div class="w3-third">
+<label>Título SEO</label>
+<textarea class="w3-input w3-border" id="res_f5"></textarea>
+</div>
+<div class="w3-third">
+<label>Sinopse SEO</label>
+<textarea class="w3-input w3-border" id="res_f6"></textarea>
+</div>
+<div class="w3-third">
+<label>Entrada IPlay</label>
+<textarea class="w3-input w3-border" id="res_f7"></textarea>
+</div>
+</div>
+<p>Note que, se você não tiver preenchido todos os campos, precisará editar manualmente o código gerado.</p>
+</div>
+<footer class="w3-container w3-teal">
+<p>Gerador de Posts. © 2018 João Pedro. <i>All rights reserved.</i></p>
+</footer>
+</div>
+</div>
+<!-- Fim do Gerador de Posts -->
+<!-- Gerador de Posts GBA 
+______                                      __                                                                  
+/      \                                    |  \                                                                 
+|  $$$$$$\  ______    ______   ______    ____| $$  ______    ______                                               
+| $$ __\$$ /      \  /      \ |      \  /      $$ /      \  /      \                                              
+| $$|    \|  $$$$$$\|  $$$$$$\ \$$$$$$\|  $$$$$$$|  $$$$$$\|  $$$$$$\                                             
+| $$ \$$$$| $$    $$| $$   \$$/      $$| $$  | $$| $$  | $$| $$   \$$                                             
+| $$__| $$| $$$$$$$$| $$     |  $$$$$$$| $$__| $$| $$__/ $$| $$                                                   
+\$$    $$ \$$     \| $$      \$$    $$ \$$    $$ \$$    $$| $$                                                   
+\$$$$$$   \$$$$$$$ \$$       \$$$$$$$  \$$$$$$$  \$$$$$$  \$$                                                   
+                                                           
+                                                           
+                                                           
+__                  _______                         __                                                     
+|  \                |       \                       |  \                                                    
+____| $$  ______        | $$$$$$$\  ______    _______  _| $$_     _______                                       
+/      $$ /      \       | $$__/ $$ /      \  /       \|   $$ \   /       \                                      
+|  $$$$$$$|  $$$$$$\      | $$    $$|  $$$$$$\|  $$$$$$$ \$$$$$$  |  $$$$$$$                                      
+| $$  | $$| $$    $$      | $$$$$$$ | $$  | $$ \$$    \   | $$ __  \$$    \                                       
+| $$__| $$| $$$$$$$$      | $$      | $$__/ $$ _\$$$$$$\  | $$|  \ _\$$$$$$\                                      
+\$$    $$ \$$     \      | $$       \$$    $$|       $$   \$$  $$|       $$                                      
+\$$$$$$$  \$$$$$$$       \$$        \$$$$$$  \$$$$$$$     \$$$$  \$$$$$$$                                       
+                                                           
+                                                           
+                                                           
+                               ______   _______    ______  
+                              /      \ |       \  /      \ 
+                             |  $$$$$$\| $$$$$$$\|  $$$$$$\
+                             | $$ __\$$| $$__/ $$| $$__| $$
+                             | $$|    \| $$    $$| $$    $$
+                             | $$ \$$$$| $$$$$$$\| $$$$$$$$
+                             | $$__| $$| $$__/ $$| $$  | $$
+                              \$$    $$| $$    $$| $$  | $$
+                               \$$$$$$  \$$$$$$$  \$$   \$$
+                                                           
+
+
+Versão do Gerador de Filmes adaptado ao estilo de posts para jogos, GBA e PSP.
+
+Codenome Ele Vai. Criado em Abril/2018.
+
+-->
+<div id="gerador_jogos" class="w3-modal">
+<div class="w3-modal-content w3-card-_480p">
+<header class="w3-container w3-teal">
+<span onclick="document.getElementById('gerador_jogos').style.display='none'" 
+class="w3-button w3-display-topright">&times;</span>
+<h2>Gerador de Posts GBA</h2>
+</header>
+<div class="w3-container">
+<p>Gerar código HTML para Jogos, formatado no estilo de post usado no Império Downloads.</p>
+<p>Gerar post para 
+<button class="w3-bar-item w3-button"  value="1" onclick='DefinirModo(this)'>ROM GBA</button>
+<button value="2"  class="w3-bar-item w3-button" onclick='DefinirModo(this)'>ROM PSP</button></p>
+<p id="resbtnj" class="w3-center"></p>
+<script>
+function DefinirModo(btn){  
+amodo=btn.value;
+if(amodo==1){document.getElementById("resbtnj").innerHTML = 'Modo GBA';}
+else if(amodo==2){document.getElementById("resbtnj").innerHTML = 'Modo PSP';}
+else {document.getElementById("resbtnj").innerHTML = '';}
+
+}
+</script><h6>Informações gerais</h6>
+<div class="w3-row-padding">
+<div class="w3-half">
+<label>Título da ROM</label>
+<textarea class="w3-input w3-border" id="gtit"></textarea>
+</div>
+<div class="w3-half">
+<label>Complemento do Título</label>
+<textarea class="w3-input w3-border" id="gtiten"></textarea>
+</div>
+<div class="w3-half">
+<label>Gênero do Jogo</label>
+<textarea class="w3-input w3-border" id="gg"></textarea>
+</div>
+<div class="w3-half">
+<label>Ano de Lançamento</label>
+<textarea class="w3-input w3-border" id="ga"></textarea>
+</div>
+<div class="w3-half">
+<label>Descrição</label>
+<textarea class="w3-input w3-border" id="gs"></textarea>
+</div>
+<div class="w3-half">
+<label>Subtítulo do Post</label>
+<textarea class="w3-input w3-border" id="gsbt"></textarea>
+</div>
+<div class="w3-half">
+<label>Origem (Oficial ou Hack ROM)</label>
+<textarea class="w3-input w3-border" id="gd"></textarea>
+</div>
+<div class="w3-half">
+<label>Idioma</label>
+<textarea class="w3-input w3-border" id="gidio"></textarea>
+</div>
+</div>
+<h6>Links de Download</h6>
+<div class="w3-row-padding">
+<div class="w3-half">
+<label>1Fichier</label>
+<textarea class="w3-input w3-border" id="gfi_480p"></textarea>
+</div>
+<div class="w3-half">
+<label>Openload</label>
+<textarea class="w3-input w3-border" id="gop_480p"></textarea>
+</div>
+<div class="w3-half">
+<label>Sendit</label>
+<textarea class="w3-input w3-border" id="gsd_480p"></textarea>
+</div>
+<div class="w3-half">
+<label>Streamango</label>
+<textarea class="w3-input w3-border" id="gst_480p"></textarea>
+</div>
+<div class="w3-half">
+<label>Upfile</label>
+<textarea class="w3-input w3-border" id="gup_480p"></textarea>
+</div>
+<div class="w3-half">
+<label>Filecloud</label>
+<textarea class="w3-input w3-border" id="gfc_480p"></textarea>
+</div>
+<div class="w3-half">
+<label>Addfile</label>
+<textarea class="w3-input w3-border" id="gup_720p"></textarea>
+</div>
+<div class="w3-half">
+<label>Downace</label>
+<textarea class="w3-input w3-border" id="gfc_720p"></textarea>
+</div>
+</div>
+<script>
+function myFunctiones() {
+var atit = document.getElementById("gtit").value; 
+var atiten = document.getElementById("gtiten").value;
+var age = document.getElementById("gg").value;
+var aan = document.getElementById("ga").value;
+var aidio = document.getElementById("gidio").value;
+var asi = document.getElementById("gs").value;
+var asub = document.getElementById("gsbt").value;
+var adu = document.getElementById("gd").value;
+var aoload_480p = document.getElementById("gop_480p").value;
+var afichier_480p = document.getElementById("gfi_480p").value;
+var afcloud_480p = document.getElementById("gfc_480p").value;
+var asmango_480p = document.getElementById("gst_480p").value;
+var asendit_480p = document.getElementById("gsd_480p").value;
+var aupfile_480p = document.getElementById("gup_480p").value;
+var afcloud_720p = document.getElementById("gfc_720p").value;
+var aupfile_720p = document.getElementById("gup_720p").value; 
+if(amodo==1){
+document.getElementById("gstatu").innerHTML = 'Modo GBA';
+document.getElementById("gres_f1").innerHTML = atit+' ('+adu+'): '+atiten;
+document.getElementById("gres_f5").innerHTML = 'Baixar '+atit+' ('+adu+') | Império Downloads';
+document.getElementById("gres_f4").innerHTML = asub;
+document.getElementById("gres_f6").innerHTML = asub;
+document.getElementById("gres_f3").innerHTML = atit+', baixar '+atit+', Download '+atit+', Baixar '+atit+' GBA, Download jogos GBA, baixar ROM HACK GBA, download JOGO '+atit+' GBA , download '+atit+' myboy, download GBA 2018, baixar jogos gameboy advanced ';
+document.getElementById("gres_f2").innerHTML = '<p style="text-align: justify;">[bws_button name="Descrição" link="#" class="primary" size="expand" ]<br>'+asi+'</p>[bws_button name="Informações Técnicas" link="#" class="primary" size="expand" ]<p style="text-align: center;"><br><b>Titulo da ROM:</b> '+atit+'<br><b>Ano de Lançamento:</b> '+aan+'<br><b>Gênero:</b> '+age+'<br><b>Idioma:</b> '+aidio+'<br><b>Oficial ou Hack:</b> '+adu+'<br></p><p style="text-align: center;">[bws_button name="Download da ROM" link="#" class="primary" size="expand" ]<a href="[rlprotetor id='+aoload_480p+']">Openload</a> | <a href="[rlprotetor id='+afcloud_480p+']">Filecloud</a> | <a href="[rlprotetor id='+afichier_480p+']">1Fichier</a> | <a href="[rlprotetor id='+asmango_480p+']">Streamango</a> | <a href="[rlprotetor id='+aupfile_720p+']">Addfile</a> | <a href="[rlprotetor id='+afcloud_720p+']">Downace</a> | <a href="[rlprotetor id='+asendit_480p+']">Sendit</a> | <a href="[rlprotetor id='+aupfile_480p+']">Upfile</a></p><hr /><p style="text-align: justify;">Sugestões? Dúvidas? Problemas? Deixe abaixo nos comentários! ?</p>';}
+else if(amodo==2){
+document.getElementById("gstatu").innerHTML = 'Modo PSP';
+document.getElementById("gres_f1").innerHTML = atit+' ('+adu+'): '+atiten;
+document.getElementById("gres_f5").innerHTML = 'Baixar '+atit+' ('+adu+') | Império Downloads';
+document.getElementById("gres_f4").innerHTML = asub;
+document.getElementById("gres_f6").innerHTML = asub;
+document.getElementById("gres_f3").innerHTML = atit+', baixar '+atit+', Download '+atit+', Baixar '+atit+' PSP, Download jogos PSP, baixar ROM HACK PSP, download JOGO '+atit+' PSP , download '+atit+' myboy, download PSP 2018, baixar jogos gameboy advanced ';
+document.getElementById("gres_f2").innerHTML = '<p style="text-align: justify;">[bws_button name="Descrição" link="#" class="primary" size="expand" ]<br>'+asi+'</p>[bws_button name="Informações Técnicas" link="#" class="primary" size="expand" ]<p style="text-align: center;"><br><b>Titulo da ROM:</b> '+atit+'<br><b>Ano de Lançamento:</b> '+aan+'<br><b>Gênero:</b> '+age+'<br><b>Idioma:</b> '+aidio+'<br><b>Oficial ou Hack:</b> '+adu+'<br></p><p style="text-align: center;">[bws_button name="Download da ROM" link="#" class="primary" size="expand" ]<a href="[rlprotetor id='+aoload_480p+']">Openload</a> | <a href="[rlprotetor id='+afcloud_480p+']">Filecloud</a> | <a href="[rlprotetor id='+afichier_480p+']">1Fichier</a> | <a href="[rlprotetor id='+asmango_480p+']">Streamango</a> | <a href="[rlprotetor id='+aupfile_720p+']">Addfile</a> | <a href="[rlprotetor id='+afcloud_720p+']">Downace</a> | <a href="[rlprotetor id='+asendit_480p+']">Sendit</a> | <a href="[rlprotetor id='+aupfile_480p+']">Upfile</a></p><hr /><p style="text-align: justify;">Sugestões? Dúvidas? Problemas? Deixe abaixo nos comentários! ?</p>';}else{alert('Você não selecionou um modo válido.');}
+}
+</script>
+<p>
+<center><button type="button" onclick="myFunctiones();" class="w3-button w3-border w3-hover-teal">Gerar códigos!</button></center>
+</p>
+<p id="gstatu"></p>
+<div class="w3-row-padding">
+<div class="w3-third">
+Título
+<textarea class="w3-input w3-border" id="gres_f1"></textarea>
+</div>
+<div class="w3-third">
+Post
+<textarea class="w3-input w3-border" id="gres_f2"></textarea>
+</div>
+<div class="w3-third">
+Tags
+<textarea class="w3-input w3-border" id="gres_f3"></textarea>
+</div>
+<div class="w3-third">
+<label>Subtítulo</label>
+<textarea class="w3-input w3-border" id="gres_f4"></textarea>
+</div>
+<div class="w3-third">
+<label>Título SEO</label>
+<textarea class="w3-input w3-border" id="gres_f5"></textarea>
+</div>
+<div class="w3-third">
+<label>Sinopse SEO</label>
+<textarea class="w3-input w3-border" id="gres_f6"></textarea>
+</div>
+</div>
+<p>Note que, se você não tiver preenchido todos os campos, precisará editar manualmente o código gerado.</p>
+</div>
+<footer class="w3-container w3-teal">
+<p>Gerador de Posts. © 2018 João Pedro. <i>All rights reserved.</i></p>
+</footer>
+</div>
+</div>
+
+<div id="gerador_twitter" class="w3-modal">
+<style>
+/* Estilos da Página */
+#body{
+background: linear-gradient(to bottom right, purple, red);
+background-repeat:no-repeat;
+background-size:100% 100%;
+color:white;
+text-align:center;
+}
+#hidel{
+display:none;
+}
+button {
+float: center;
+background-color:transparent;
+color: white;
+padding:10px;
+border: 0px solid green;
+}
+button:hover {
+background-color:white;
+color: purple;
+padding:10px;
+border: 0px solid green;
+}
+
+a{text-decoration:none;color:white;}
+</style>
+<div id="body">
+<h2>Nick Conjugator</h2> 
+<p>Criador: João Pedro<br>
+Data: 22/abr/2018</p>
+
+<p><select id="hidel">
+<option>Apple</option>
+</select>
+Número de sufixos: <span id="suff"></span><br><button onclick="aumentar()">Aumentar &uarr;</button><button onclick="dirimir()">&darr; Diminuir</button></p>
+
+<p><button onclick="executar()">Iniciar!</button></p>
+
+<p><span id="resultados"></span></p>
+<script>
+document.getElementById("suff").innerHTML = hidel.length;
+
+function aumentar() {
+var x = document.createElement("OPTION");
+x.setAttribute("value", "volvocar");
+var t = document.createTextNode("Volvo");
+x.appendChild(t);
+document.getElementById("hidel").appendChild(x);
+document.getElementById("suff").innerHTML = hidel.length;
+}
+
+function dirimir() {
+var x = document.getElementById("hidel");
+x.remove(x.selectedIndex);
+document.getElementById("suff").innerHTML = hidel.length;
+}
+
+function executar(){
+var text = "";
+var par = " ";
+var user = prompt("Parte comum (Infixo)\nex.: jujubar = juju"); 
+var jake = document.getElementById("suff").innerHTML = hidel.length;
+var arr = [];     
+var sites = [];
+var finn;// define our array
+for (var i = 0; i < jake; i++)
+{              // loop some times
+arr.push(prompt('Sufixo ' + (i+1) + '\n(ex.: "jujubar", informe bar.)' )); 
+}
+finn = "";
+
+// Unir todos os sufixos p/ preench. formulário
+for (i = 0; i < jake; i++) 
+{
+finn += arr[i] + " ";
+}
+
+// Abrir nova janela para cada final
+par += '<p>';
+for (i = 0; i < jake; i++) 
+{
+finn = arr[i];
+var text = user.concat(finn);
+sites[i] = "https://twitter.com/"+text;
+par += '<span class="w3-tag"><a target="_blank" href="https://twitter.com/'+text+'">'+text+'</a></span> ';
+}
+par += '</p><p>Dica: Pressione <span class="w3-tag w3-white">Ctrl</span> enquanto clica para abrir os links em uma nova aba!'
+// Preencimento dos Resultados
+document.getElementById("resultados").innerHTML = par;  
+}  
+</script>
+<footer class="w3-container">
+<p>Gerador de Nicks. © 2018 João Pedro. <i>All rights reserved.</i></p>
+<span onclick="document.getElementById('gerador_filmes').style.display='none'" class="w3-button">Fechar página &times;</span>
+</footer>
+</div>
