@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<title>Calculadora de Notas</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdn.metroui.org.ua/v4/css/metro-all.min.css">
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdn.metroui.org.ua/v4/js/metro.min.js"></script>
+
+<style>
+body{
+padding:64px;
+font-family:"Segoe UI","Roboto",sans-serif;
+}
+#titulo{
+font-size:1.25em;
+display:block;
+}
+</style>
+
+<body>
+<span id="head"><span id="titulo">Calculadora de Notas</span>criado por João Pedro<br><a href="https://twitter.com/12h01" target="_blank">Twitter</a> | <a href="https://12h01.github.io" target="_blank">Github</a> | <a href="https://instagram.com/imjpedr" target="_blank">Instagram</a></span>
+
+<p><i><!-- Mensagens -->
+<div id="msg1"></div>
+<div id="msg2"></div>
+<div id="msg3"></div>
+<div id="msg4"></div>
+</i></p>
+
+<p><!--Sliders-->
+Nota da N1: <span style="font-family:monospace;padding:16px;font-size:1.2em;" id="n1"></span><br><input type="range" id="rangeN1" style="width:100%" min="0" max="10" value="7" step="0.1">
+Nota da N2: <span style="font-family:monospace;padding:16px;font-size:1.2em;" id="n2"></span><br><input type="range" id="rangeN2" style="width:100%" min="0" max="10" value="7" step="0.1">
+</p>
+
+<script>
+var inp = document.getElementById('rangeN1');
+inp.addEventListener("mousemove", function () {
+    document.getElementById('n1').innerHTML = this.value;
+});
+var inp2 = document.getElementById('rangeN2');
+inp2.addEventListener("mousemove", function () {
+    document.getElementById('n2').innerHTML = this.value;
+});
+</script>
+
+<p><!-- Botões 
+<button class="button outline" onclick="calcularN1()">Calcular nota da N1</button>-->
+</p>
+
+<p id="debug" style="display:none;">
+<b>Dados na memória:</b><br>
+Média Parcial: <span id="mp"></span><br>
+AVF: <span id="avf"></span><br>
+Média Final: <span id="mf"></span><br><b>Mensagem:</b><br>
+<span id="status"></span>
+</p>
+
+</body>
+</html>
