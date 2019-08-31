@@ -1,0 +1,13 @@
+/* Your app styles here */
+.ios .tabbar-labels .tab-link:not(.tab-link-active) .icon-ios-fill {
+  display: none;
+}
+.ios .tabbar-labels .tab-link.tab-link-active .icon:not(.icon-ios-fill) {
+  display: none;
+}
+.mnicon{
+  width: 24px;
+  height: 3px;
+  background-color: black;
+  margin: 4px 0;
+}
