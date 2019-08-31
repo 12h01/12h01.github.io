@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+  <meta name="theme-color" content="#2196f3">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="msapplication-tap-highlight" content="no">
+  <title>MeuAcadêmico</title>
+  <link rel="stylesheet" href="css/framework7.bundle.min.css">
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="MeuAcadêmico">
+  <link rel="apple-touch-icon" href="/icons/icon-192x192.png">
+  <meta name="description" content="Gerencie seu desempenho acadêmico de forma simples e rápida com o MeuAcadêmico">
+</head>
+<body>
+  <div id="app">
+    <div class="statusbar"></div>
+    <div class="panel panel-left panel-cover theme-dark">
+      <div class="view">
+        <div class="page">
+          <div class="navbar">
+            <div class="navbar-inner">
+              <div class="title">Sobre o MeuAcadêmico</div>
+            </div>
+          </div>
+          <div class="page-content">
+            <div class="block-strong" style="padding:12px;">O MeuAcadêmico é um projeto pessoal. Caso você queira contribuir com o desenvolvimento, sugerir alguma função ou informar algum bug, pode entrar em contato comigo.</div>
+            <div class="block links-list"><a class="links-list" onclick="agradecer();">Agradecimentos</a><a class="links-list" onclick="contato();">Entre em contato comigo</a></div>
+            <div class="block">Software MeuAcadêmico<br>Versão 1.0.9 (build 190831-1)</div>
+            <div class="block">&copy; 2019 João Pedro (@12h01).<br>Todos os direitos reservados.</div>            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="views tabs safe-areas">
+      <div id="view-home" class="view view-main tab tab-active">
+        <div class="page" data-name="home">
+          <div class="navbar">
+            <div class="navbar-inner">
+              <div class="left">
+                <a href="#" class="link icon-only panel-open" data-panel="left">
+                  <span style="display:inline-block;"><div class="mnicon"></div><div class="mnicon"></div><div class="mnicon"></div></span>
+                </a>
+              </div>
+              <div class="title sliding">MeuAcadêmico</div>
+              <div class="right">
+                <p style="font-size:0.6em;padding-right:8px;">v1.0.9<br>por João Pedro</p>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top:-8px;" class="page-content">
+            <div class="block">
+                <p style="margin-top:-8px;"><b>Tenha o controle de suas notas!</b></p>
+                <p>Com o MeuAcadêmico, você pode controlar manualmente as notas de suas disciplinas. Chega de esperar pela boa vontade do professor!</p>
+                <p>Note que todos os dados de suas notas são armazenados localmente no seu celular. <b>Nenhum</b> dado pessoal ou que possa lhe identificar é enviado para qualquer outro servidor online.</p>
+            </div>
+            <div class="block">
+                <p>Através da ferramenta <b>Disciplinas</b>, você pode armazenar e gerenciar todas as disciplinas, armazenar notas de provas, e calcular a nota de sua N1 e N2 para cada disciplina em curso.</p>
+                <p>Já a opção <b>Calcular notas</b> permite que você calcule rapidamente qual a nota mínima necessária para você passar em uma  disciplina sem realizar a prova final (ou seja, passar no mínimo com média 7). Caso você precise fazer a AVF, ele também diz quanto você precisa tirar na AVF para poder passar.</p>
+            </div>
+
+            <div style="margin-top:-8px;" class="block block-strong">
+              <div class="row">
+                <div class="col-50">
+                  <a href="#" class="button button-raised button-fill login-screen-open" onclick="rotinaDisciplinas();" data-login-screen="#my-login-screen">Disciplinas</a>
+                </div>
+                <div class="col-50">
+                  <a href="#" class="button button-raised button-fill popup-open" data-popup="#my-popup">Calcular notas</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Popup -->
+    <div class="popup" id="my-popup">
+      <div class="view">
+        <div class="page">
+          <div class="navbar">
+            <div class="navbar-inner">
+              <div class="title">Calcular notas</div>
+              <div class="right">
+                <a href="#" class="link popup-close">×</a>
+              </div>
+            </div>
+          </div>
+          <div class="page-content">
+            <div class="block">
+              <p style="text-align:center;">Calcule suas notas de uma forma prática e rápida!</p>
+            </div>
+            <div class="row block-strong">
+              <div class="col-50">
+                <div style="text-align:center;"><input style="text-align:center;" type="tel" name="liven1" id="liven1" oninput="this.value = this.value.replace(/,/g, '.');if(parseFloat(this.value) > 10) this.value = 10;if(this.value != '') livenota(1);" placeholder="Nota N1">
+                </div>
+              </div>
+              <div class="col-50">
+                <div style="text-align:center;"><input style="text-align:center;" type="tel" name="liven2" id="liven2" oninput="this.value = this.value.replace(/,/g, '.');if(parseFloat(this.value) > 10) this.value = 10;if(this.value != '') livenota(2);" placeholder="Nota N2">
+                </div>            
+              </div>
+              <div class="block">
+                <p id="msglive" style="text-align:center;"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Popup das Disciplinas -->
+    <div class="popup" id="popup-dscp">
+      <div class="view">
+        <div class="page">
+          <div class="navbar">
+            <div class="navbar-inner">
+              <div class="title" id="pp-tt">Popup das disciplinas</div>
+              <div class="right">
+                <a href="#" class="link popup-close" onclick="app.loginScreen.open('#my-login-screen');">Voltar</a>
+              </div>
+            </div>
+          </div>
+          <div class="page-content">
+            <p style="text-align:center;">Clique nas notas das provas para alterá-las.</p>
+            <div class="block">
+              <div>
+                <div class="block-title">Notas da N1</div>
+                  <div class="list links-list">
+                    <ul>
+                      <li onclick="alterar(1);">
+                        <a href="#">Primeira prova: <span id="n1p1">7.0</span></a>
+                      </li>
+                      <li onclick="alterar(2);">
+                        <a href="#">Segunda prova: <span id="n1p2">7.0</span></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="block-title">Notas da N2</div>
+                  <div class="list links-list">
+                    <ul>
+                      <li onclick="alterar(3);">
+                        <a href="#">Primeira prova: <span id="n2p1">7.0</span></a>
+                      </li>
+                      <li onclick="alterar(4);">
+                        <a href="#">Segunda prova: <span id="n2p2">7.0</span></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="block-title">Estado da disciplina</div>
+                  <div class="list links-list">
+                    <ul>
+                      <li>
+                        <a href="#" class="item-link item-content">Nota na N1: <span id="n1">7.0</span></a>
+                      </li>
+                      <li>
+                        <a href="#">Nota na N2: <span id="n2">7.0</span></a>
+                      </li>
+                      <li>
+                        <a href="#">Média parcial: <span id="mp">7.0</span></a>
+                      </li>
+                      <p id="extramsg" style="text-align:center;margin-top:2em;padding-bottom:2em;">7.0</p>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Login Screen -->
+    <div class="login-screen" id="my-login-screen">
+      <div class="view">
+        <div class="page">
+          <div class="page-content login-screen-content">
+            <div class="login-screen-title">Disciplinas</div>
+            <div id="lista_disc" class="list">
+              <div class="list links-list">
+                <ul id="dscp" class="list links-list" style="padding-left:16px;padding-right:16px;">
+                </ul>
+              </div>
+            </div>
+            
+            <div id="cad_disc" class="list block-strong">
+              <ul>
+                <li class="item-content item-input">
+                  <div class="item-inner">
+                    <div class="item-title item-label">Adicionar disciplina</div>
+                    <div class="item-input-wrap">
+                      <input type="text" name="username" id="disc_nome" placeholder="Nome...">
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <a href="#" class="item-link list-button" onclick="add_disc();document.getElementById('disc_nome').value='';">Adicionar disciplina</a>
+                </li>
+              </ul>
+            </div>
+            
+            <div class="list">
+              <ul>
+                <li>
+                  <a href="#" class="item-link list-button login-button">Fechar</a>
+                </li>
+              </ul>
+              <div class="block-footer">Os seus dados ficam salvos <b>localmente</b>.<br>Não há como acessá-los de outro aparelho.</div>
+            </div>
+
+            <div class="list">
+              <ul>
+                <li>
+                  <a href="#" onclick="reset();" style="color:red;" class="item-link list-button login-button">Limpar disciplinas</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Framework7 library -->
+  <script src="js/framework7.bundle.min.js"></script>
+
+  <!-- Your custom app scripts -->
+  <script src="js/app.js"></script>
+  <div id="fim" style="display:none;">
+</body>
+</html>
